@@ -1,5 +1,3 @@
-import itertools
-
 def clean_line(line):
     cleaned_line=""
     for letter in line:
@@ -20,11 +18,10 @@ def clean_word(word):
             cleaned_word+=' '
     return cleaned_word
 
-def parse_srt(srt_path):
-    srt_file = open(srt_path, "r")
-    for _ in range(3):
-        line = srt_file.readline()
-    while line!="":
+def parse_srt(srt_file):
+    for line in srt_file:
+        if line=="":
+            break
         if len(line)<2:
             break
         if line.find("-->") != -1:
@@ -41,3 +38,4 @@ def parse_srt(srt_path):
                 yield word
             if word.isupper():
                 yield word
+        line = srt_file.readline()
