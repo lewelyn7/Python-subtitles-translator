@@ -16,7 +16,8 @@ class csv_importer:
         except AssertionError as inst:
             print("assert error", inst.args)
     def read(self):
-        """ returns an iterator over words in csvfile"""
+        """ returns an iterator over words in csvfile
+            """
         try:
             csvfile = open(self.filename)
         except IOError:
@@ -26,6 +27,9 @@ class csv_importer:
             if self.header == True:
                 next(csvreader)
             for row in csvreader:
+                # normalize strings
+                row[0] = row[0].lower().strip()
+                row[1] = row[1].lower().strip()
                 if self.firstcol == "mylang":
                     yield (row[0], row[1])
                 else:
