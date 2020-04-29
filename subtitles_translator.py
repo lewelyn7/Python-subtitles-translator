@@ -18,16 +18,16 @@ if __name__ == "__main__":
 
     fl = w_filter()
     
-    srt_file = open("example_srt_file.txt", "r")
-    srt_words = parse_srt(srt_file)
-    for word in srt_words:
-        print(word + " podstawowa forma " + fl.filter(word.lower()))
+    # srt_file = open("friends3_but_short.srt", "r")
+    # srt_words = parse_srt(srt_file)
+    # for word in srt_words:
+    #     print(word + " podstawowa forma " + fl.filter(word.lower()))
 
 
-    for word in anki.read():
-        db_item = {}
-        # print( word[0] + " - " + word[1])
-        db_item['word'] = word[0]
-        db_item['translation'] = word[1]
-        db_insert_wrapper(db, db_item)
+    # for word in anki.read():
+    #     db_item = {}
+    #     # print( word[0] + " - " + word[1])
+    #     db_item['word'] = word[0]
+    #     db_item['translation'] = word[1]
+    #     db_insert_wrapper(db, db_item)
 
