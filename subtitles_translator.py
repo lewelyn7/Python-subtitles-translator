@@ -1,6 +1,6 @@
 from srt_parser import parse_srt
 from csv_importer import csv_importer
-from word_filter import w_filter
+from filters.word_filter import w_filter
 from tinydb import TinyDB, Query
 
 def db_insert_wrapper(db, word):
@@ -21,8 +21,7 @@ if __name__ == "__main__":
     srt_file = open("example_srt_file.txt", "r")
     srt_words = parse_srt(srt_file)
     for word in srt_words:
-        print(word)
-        fl.filter(word.lower())
+        print(word + " podstawowa forma " + fl.filter(word.lower()))
 
 
     for word in anki.read():
