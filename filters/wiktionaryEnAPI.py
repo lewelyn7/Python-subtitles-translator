@@ -1,8 +1,8 @@
 from wiktionaryparser import WiktionaryParser
-from .API import API
+from .conjugationEnAPI import conjugationAPI
 import re
 
-class wiktionary_api_filter(API):
+class wiktionary_api_filter(conjugationAPI):
     def __init__(self):
         self.wiki_parser = WiktionaryParser()
 
