@@ -32,10 +32,3 @@ def line_to_tokens(line):
     for token in cleaned_line.split(" "):
         if len(token) > 0:
             yield token
-
-if __name__ == "__main__":
-    file = open('./friends3_but_short.srt')
-    lines = srt_to_line(file)
-    for line in lines:
-        for token in line_to_tokens(line):
-            print(token)
