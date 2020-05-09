@@ -1,4 +1,4 @@
-from tinydb import TinyDB, Querry
+from tinydb import TinyDB, Query
 
 class db_helpers:
     def __init__(self, known_words_path, basic_forms_path, film_stats_path):
@@ -7,7 +7,7 @@ class db_helpers:
         self.dbStats = TinyDB(film_stats_path)
         
     def is_word_known(self, word):
-        found_word = self.dbKnown.search(Querry()['word'] == word)
+        found_word = self.dbKnown.search(Query()['word'] == word)
         #try catch here later
         if found_word:
             return True
@@ -17,7 +17,7 @@ class db_helpers:
         #try catch here later
         if not self.is_word_known(word):
             return None
-        basic_form_id = self.dbKnown.search(Querry()['word']==word)[0].doc_id
+        basic_form_id = self.dbKnown.search(Query()['word']==word)[0].doc_id
         basic_form = self.dbBasic.get(doc_id = basic_form_id)
         return basic_form
 
@@ -27,7 +27,7 @@ class db_helpers:
 
     def get_stats(self, word):
         basic_form = self.get_basic_form(word)
-        stats = self.dbStats.search(Querry()['wordID'] == basic_form.doc_id)
+        stats = self.dbStats.search(Query()['wordID'] == basic_form.doc_id)
         return stats[0]
 
     def increment_frequency(self, word):
@@ -38,7 +38,7 @@ class db_helpers:
         return
 
     def get_most_frequent_words(self, frequency_treshold):
-        most_frequent_words = self.dbStats.search(Querry()['frequency'] >= frequency_treshold)
+        most_frequent_words = self.dbStats.search(Query()['frequency'] >= frequency_treshold)
         return most_frequent_words
     
     def insert_film_stats(self, wordID):
@@ -51,10 +51,14 @@ class db_helpers:
         return
 
     def insert_known_word(self, word, word_basic_form):
-        basic_forms = self.dbBasic.find(Querry()['word'] == word_basic_form)
+        basic_forms = self.dbBasic.find(Query()['word'] == word_basic_form)
         #try catch here
         if not basic_forms:
             return None
         self.dbKnown.insert({'word': word, 'basic_formID': basic_forms[0].doc_id})
         return
     
+    
+if __name__ == "__main__":
+    db = db_helpers('known_words.json', 'basic_forms.json', 'film_stats.json')
+
