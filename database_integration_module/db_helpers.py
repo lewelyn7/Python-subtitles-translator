@@ -1,4 +1,5 @@
 from tinydb import TinyDB, Querry
+
 class db_helpers:
     def __init__(self, known_words_path, basic_forms_path, film_stats_path):
         self.dbKnown = TinyDB(known_words_path)
@@ -45,7 +46,8 @@ class db_helpers:
         return
     
     def insert_basic_form(self, word, rating, translations):
-        self.dbBasic.insert({'word': word, 'rating': rating, "translations": translations})
+        word_id = self.dbBasic.insert({'word': word, 'rating': rating, "translations": translations})
+        self.insert_film_stats(word_id)
         return
 
     def insert_known_word(self, word, word_basic_form):
@@ -55,5 +57,4 @@ class db_helpers:
             return None
         self.dbKnown.insert({'word': word, 'basic_formID': basic_forms[0].doc_id})
         return
-    
     
