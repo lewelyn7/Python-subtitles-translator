@@ -1,6 +1,6 @@
 import requests
-
-class twinwordAPI:
+import json
+class TwinwordAPI:
     """ Don't use it we have only 10k per month support for language scoring"""
 
     def __init__(self):        
@@ -11,6 +11,9 @@ class twinwordAPI:
             'x-rapidapi-key': "2405fb23c9msh8dd436952fb8d10p1f59d6jsn97a6bf469ce9"
             }
 
-    def get_JSON(self, word):
-        response = requests.request("GET", self.url, headers=self.headers, params=self.querystring)
-        return response.text
+    def fetch(self, word):
+        self.response = requests.request("GET", self.url, headers=self.headers, params=self.querystring)
+        assert self.response.status_code == 200, "Request returned " + str(self.response.status_code) + " status code"
+        self.word_info = json.loads(self.response.text)
+        self.ten_degree = self.word_info["ten_degree"]
+        self.value = self.word_info["value"]
