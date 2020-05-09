@@ -1,5 +1,4 @@
 from wiktionaryparser import WiktionaryParser
-from .conjugationEnAPI import conjugationAPI
 import re
 
 class WiktionaryEnAPI:

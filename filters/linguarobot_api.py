@@ -1,5 +1,4 @@
 import requests
-from .conjugationEnAPI import conjugationAPI
 import json
 
 class LinguaRobotAPI():

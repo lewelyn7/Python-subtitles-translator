@@ -1,7 +1,8 @@
 #from .srt_parsing_modules.srt_parser import parse_srt
 from csv_importer import csv_importer
-from filters.word_filter import word_filter
+from filters.word_filter import WordFilter
 from tinydb import TinyDB, Query
+from dictionaries.dict_api import DictAPI
 
 def db_insert_wrapper(db, word):
     qur = Query()
@@ -16,7 +17,8 @@ if __name__ == "__main__":
 
     anki = csv_importer("testAnki.csv")
 
-    fl = word_filter()
+    # fl = word_filter()
+    dictapi = DictAPI()
     
     # srt_file = open("friends3_but_short.srt", "r")
     # srt_words = parse_srt(srt_file)
