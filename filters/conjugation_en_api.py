@@ -1,5 +1,5 @@
 import abc
-class conjugationAPI(abc.ABC):
+class ConjugationAPI():
     def is_vowel(self, c):
         if c == 'a':
             return True
