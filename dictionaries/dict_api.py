@@ -2,8 +2,8 @@ from tinydb import TinyDB, Query
 
 class DictAPI:
     """ TODO  """
-    def __init__(self):
-        self.db = TinyDB('dictionaries/eng_pol_dict.json')
+    def __init__(self, db_file):
+        self.db = TinyDB(db_file)
 
     def get_translation(self, word):
         qr = Query()

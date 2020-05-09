@@ -8,9 +8,11 @@ class WordFilter:
     def __init__(self):
         self.engine = LinguaRobotAPI()
         self.conEngine = ConjugationAPI()
-        self.scoringEngine = TwinwordAPI()
 
     def filter(self, word):
+        """ returns form of a word that should be put in the database,
+            so it's either basic form of a word or conjungated form in case of
+            irregular conjungation """
         self.engine.fetch(word)
         part_of_speeches = self.engine.part_of_speeches
 
