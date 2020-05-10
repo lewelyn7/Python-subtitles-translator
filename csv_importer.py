@@ -16,8 +16,7 @@ class csv_importer:
         except AssertionError as inst:
             print("assert error", inst.args)
     def read(self):
-        """ returns an iterator over words in csvfile
-            """
+        """ returns an iterator over tuple of words (word, translation) in csvfile"""
         try:
             csvfile = open(self.filename)
         except IOError:

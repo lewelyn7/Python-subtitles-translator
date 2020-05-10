@@ -16,7 +16,7 @@ class WordFilter:
         self.engine.fetch(word)
         part_of_speeches = self.engine.part_of_speeches
 
-        print(part_of_speeches)
+        # print(part_of_speeches)
         
         basic_form = word
         for part in part_of_speeches:
