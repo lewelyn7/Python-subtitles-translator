@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MostFrequentList</class>
+ <widget class="QMainWindow" name="MostFrequentList">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -232,5 +232,109 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>translateWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>111</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>go_right_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>nextWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>629</x>
+     <y>128</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>33</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>go_left_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>perviousWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>217</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>saveAndExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>not_known_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>updateScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>379</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>known_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MostFrequentList</receiver>
+   <slot>updateScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>280</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>translateWord()</slot>
+  <slot>nextWord()</slot>
+  <slot>perviousWord()</slot>
+  <slot>saveAndExit()</slot>
+  <slot>updateScore()</slot>
+ </slots>
 </ui>
