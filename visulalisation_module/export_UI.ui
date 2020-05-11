@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>515</width>
+    <width>811</width>
     <height>239</height>
    </rect>
   </property>
@@ -38,7 +38,7 @@
       </sizepolicy>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -224,5 +224,109 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>open_file_selector_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>export_dialog</receiver>
+   <slot>select_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>column_separator_box</sender>
+   <signal>editingFinished()</signal>
+   <receiver>export_dialog</receiver>
+   <slot>column_sep_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>-9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>record_separator_combo_box</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>export_dialog</receiver>
+   <slot>record_sep_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>660</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>565</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>column_order_combo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>export_dialog</receiver>
+   <slot>column_order_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>549</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>export_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>export_dialog</receiver>
+   <slot>export_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>131</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>file_extension_box</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>export_dialog</receiver>
+   <slot>file_extension_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>716</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>column_sep_changed()</slot>
+  <slot>record_sep_changed()</slot>
+  <slot>column_order_changed()</slot>
+  <slot>export_clicked()</slot>
+  <slot>file_extension_changed()</slot>
+ </slots>
 </ui>

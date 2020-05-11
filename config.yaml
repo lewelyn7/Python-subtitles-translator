@@ -1,1 +1,4 @@
-database_file: /home/karolh/Desktop/studia/4semestr/Python/Python-subtitles-translator/db_test.json
+database_filename: /home/karolh/Desktop/studia/4semestr/Python/Python-subtitles-translator/db_test.json
+word_lemmatization_API: LinguaRobotAPI
+word_scoring_API: Offline Database
+word_translation_API: TwinWordAPI

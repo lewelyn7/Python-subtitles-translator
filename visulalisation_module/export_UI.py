@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\export_UI.ui'
+# Form implementation generated from reading ui file 'export_UI.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -14,7 +14,7 @@ class Ui_export_dialog(object):
     def setupUi(self, export_dialog):
         export_dialog.setObjectName("export_dialog")
         export_dialog.setEnabled(True)
-        export_dialog.resize(515, 239)
+        export_dialog.resize(811, 239)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -114,7 +114,13 @@ class Ui_export_dialog(object):
         self.gridLayout_2.addWidget(self.tabWidget, 1, 0, 1, 1)
 
         self.retranslateUi(export_dialog)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
+        self.open_file_selector_btn.clicked.connect(export_dialog.select_file)
+        self.column_separator_box.editingFinished.connect(export_dialog.column_sep_changed)
+        self.record_separator_combo_box.currentIndexChanged['QString'].connect(export_dialog.record_sep_changed)
+        self.column_order_combo.currentIndexChanged['QString'].connect(export_dialog.column_order_changed)
+        self.export_btn.clicked.connect(export_dialog.export_clicked)
+        self.file_extension_box.currentIndexChanged['QString'].connect(export_dialog.file_extension_changed)
         QtCore.QMetaObject.connectSlotsByName(export_dialog)
 
     def retranslateUi(self, export_dialog):

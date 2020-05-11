@@ -7,8 +7,8 @@ class Config:
             self.filename = fname
             self.val = {
                 "database_filename": "",
-                "lemmatization_API": "",
-                "translation_API": "",
+                "word_lemmatization_API": "",
+                "word_translation_API": "",
                 "word_scoring_API": ""
             }
     inst = None
