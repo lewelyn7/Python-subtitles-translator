@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\most_frequent_list.ui'
+# Form implementation generated from reading ui file 'most_frequent_list_UI.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -10,11 +10,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(707, 374)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_MostFrequentList(object):
+    def setupUi(self, MostFrequentList):
+        MostFrequentList.setObjectName("MostFrequentList")
+        MostFrequentList.resize(707, 374)
+        self.centralwidget = QtWidgets.QWidget(MostFrequentList)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
@@ -128,41 +128,37 @@ class Ui_MainWindow(object):
         self.save_button.setObjectName("save_button")
         self.verticalLayout_3.addWidget(self.save_button)
         self.gridLayout.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        MostFrequentList.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MostFrequentList)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 707, 21))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        MostFrequentList.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MostFrequentList)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        MostFrequentList.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MostFrequentList)
+        self.pushButton.clicked.connect(MostFrequentList.translateWord)
+        self.go_right_button.clicked.connect(MostFrequentList.nextWord)
+        self.go_left_button.clicked.connect(MostFrequentList.previousWord)
+        self.save_button.clicked.connect(MostFrequentList.saveAndExit)
+        self.not_known_button.clicked.connect(MostFrequentList.updateScore)
+        self.known_button.clicked.connect(MostFrequentList.updateScore)
+        QtCore.QMetaObject.connectSlotsByName(MostFrequentList)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MostFrequentList):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.go_left_button.setText(_translate("MainWindow", "<"))
-        self.go_left_button.setShortcut(_translate("MainWindow", "Left"))
-        self.word_label.setText(_translate("MainWindow", "TextLabel"))
-        self.go_right_button.setText(_translate("MainWindow", ">"))
-        self.go_right_button.setShortcut(_translate("MainWindow", "Right"))
-        self.known_button.setText(_translate("MainWindow", "Znam"))
-        self.known_button.setShortcut(_translate("MainWindow", "Z"))
-        self.not_known_button.setText(_translate("MainWindow", "Nie Znam"))
-        self.not_known_button.setShortcut(_translate("MainWindow", "X"))
-        self.pushButton.setText(_translate("MainWindow", "Tłumacz"))
-        self.pushButton.setShortcut(_translate("MainWindow", "Space"))
-        self.save_button.setToolTip(_translate("MainWindow", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
-        self.save_button.setText(_translate("MainWindow", "Zapisz wszystkie"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        MostFrequentList.setWindowTitle(_translate("MostFrequentList", "MainWindow"))
+        self.go_left_button.setText(_translate("MostFrequentList", "<"))
+        self.go_left_button.setShortcut(_translate("MostFrequentList", "Left"))
+        self.word_label.setText(_translate("MostFrequentList", "TextLabel"))
+        self.go_right_button.setText(_translate("MostFrequentList", ">"))
+        self.go_right_button.setShortcut(_translate("MostFrequentList", "Right"))
+        self.known_button.setText(_translate("MostFrequentList", "Znam"))
+        self.known_button.setShortcut(_translate("MostFrequentList", "Z"))
+        self.not_known_button.setText(_translate("MostFrequentList", "Nie Znam"))
+        self.not_known_button.setShortcut(_translate("MostFrequentList", "X"))
+        self.pushButton.setText(_translate("MostFrequentList", "Tłumacz"))
+        self.pushButton.setShortcut(_translate("MostFrequentList", "Space"))
+        self.save_button.setToolTip(_translate("MostFrequentList", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
+        self.save_button.setText(_translate("MostFrequentList", "Zapisz wszystkie"))
