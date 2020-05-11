@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\load_srt_UI.ui'
+# Form implementation generated from reading ui file 'load_srt_UI.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -8,7 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import sys
 
 class Ui_load_srt(object):
     def setupUi(self, load_srt):
@@ -127,7 +127,13 @@ class Ui_load_srt(object):
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         self.retranslateUi(load_srt)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
+        self.select_file_btn.clicked.connect(load_srt.open_file_dialog)
+        self.load_btn.clicked.connect(load_srt.load_file_action)
+        self.select_file_btn_2.clicked.connect(load_srt.open_database_file)
+        self.word_scoring_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
+        self.word_lemma_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
+        self.word_trans_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
         QtCore.QMetaObject.connectSlotsByName(load_srt)
 
     def retranslateUi(self, load_srt):
@@ -151,10 +157,15 @@ class Ui_load_srt(object):
 
 
 if __name__ == "__main__":
-    import sys
+    # import sys
+    # app = QtWidgets.QApplication(sys.argv)
+    # load_srt = QtWidgets.QDialog()
+    # ui = Ui_load_srt()
+    # ui.setupUi(load_srt)
+    # load_srt.show()
+    # sys.exit(app.exec_())
+
     app = QtWidgets.QApplication(sys.argv)
-    load_srt = QtWidgets.QDialog()
-    ui = Ui_load_srt()
-    ui.setupUi(load_srt)
-    load_srt.show()
+    load_srt = MyDialog()
     sys.exit(app.exec_())
+

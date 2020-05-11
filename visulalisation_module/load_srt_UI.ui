@@ -32,7 +32,7 @@
       <enum>Qt::WheelFocus</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -237,5 +237,108 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>select_file_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>load_srt</receiver>
+   <slot>open_file_dialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>load_srt</receiver>
+   <slot>load_file_action()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>135</x>
+     <y>-3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_file_btn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>load_srt</receiver>
+   <slot>open_database_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>325</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>word_scoring_combo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>load_srt</receiver>
+   <slot>API_settings_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>443</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>word_lemma_combo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>load_srt</receiver>
+   <slot>API_settings_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>word_trans_combo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>load_srt</receiver>
+   <slot>API_settings_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_file_dialog()</slot>
+  <slot>load_file_action()</slot>
+  <slot>open_database_file()</slot>
+  <slot>API_settings_changed()</slot>
+ </slots>
 </ui>
