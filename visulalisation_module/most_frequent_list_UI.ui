@@ -1,340 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MostFrequentList</class>
- <widget class="QMainWindow" name="MostFrequentList">
+ <class>mostFrequentList</class>
+ <widget class="QDialog" name="mostFrequentList">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>707</width>
-    <height>374</height>
+    <width>631</width>
+    <height>276</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="3,1">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3,1">
-            <property name="spacing">
-             <number>14</number>
-            </property>
-            <property name="sizeConstraint">
-             <enum>QLayout::SetNoConstraint</enum>
-            </property>
-            <item>
-             <widget class="QPushButton" name="go_left_button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>30</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>&lt;</string>
-              </property>
-              <property name="shortcut">
-               <string>Left</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="word_label">
-              <property name="font">
-               <font>
-                <family>MS Shell Dlg 2</family>
-                <pointsize>20</pointsize>
-                <weight>50</weight>
-                <bold>false</bold>
-                <stylestrategy>PreferAntialias</stylestrategy>
-               </font>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
-              </property>
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-              <property name="textFormat">
-               <enum>Qt::AutoText</enum>
-              </property>
-              <property name="scaledContents">
-               <bool>true</bool>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="indent">
-               <number>1</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="go_right_button">
-              <property name="enabled">
-               <bool>true</bool>
-              </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>30</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>&gt;</string>
-              </property>
-              <property name="shortcut">
-               <string>Right</string>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontal_layout">
-          <property name="spacing">
-           <number>0</number>
-          </property>
-          <property name="sizeConstraint">
-           <enum>QLayout::SetDefaultConstraint</enum>
-          </property>
-          <property name="leftMargin">
-           <number>15</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QRadioButton" name="known_button">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>MS Shell Dlg 2</family>
-              <pointsize>12</pointsize>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
-            <property name="text">
-             <string>Znam</string>
-            </property>
-            <property name="shortcut">
-             <string>Z</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QRadioButton" name="not_known_button">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>MS Shell Dlg 2</family>
-              <pointsize>12</pointsize>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
-            <property name="text">
-             <string>Nie Znam</string>
-            </property>
-            <property name="shortcut">
-             <string>X</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pushButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <stylestrategy>PreferAntialias</stylestrategy>
-             </font>
-            </property>
-            <property name="text">
-             <string>Tłumacz</string>
-            </property>
-            <property name="shortcut">
-             <string>Space</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QPushButton" name="save_button">
-        <property name="toolTip">
-         <string>Zapisz wszystkie zmiany i przejdź do następniego kroku.</string>
-        </property>
-        <property name="text">
-         <string>Zapisz wszystkie</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>707</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5" stretch="3,1">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,3,1">
+           <property name="spacing">
+            <number>14</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
+           <item>
+            <widget class="QPushButton" name="go_left_button_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>30</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+             <property name="shortcut">
+              <string>Left</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="word_label_2">
+             <property name="font">
+              <font>
+               <family>MS Shell Dlg 2</family>
+               <pointsize>20</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="indent">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="go_right_button_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>30</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+             <property name="shortcut">
+              <string>Right</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontal_layout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QRadioButton" name="known_button_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>12</pointsize>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
+           <property name="text">
+            <string>Znam</string>
+           </property>
+           <property name="shortcut">
+            <string>Z</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="not_known_button_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>MS Shell Dlg 2</family>
+             <pointsize>12</pointsize>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
+           <property name="text">
+            <string>Nie Znam</string>
+           </property>
+           <property name="shortcut">
+            <string>X</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <stylestrategy>PreferAntialias</stylestrategy>
+            </font>
+           </property>
+           <property name="text">
+            <string>Tłumacz</string>
+           </property>
+           <property name="shortcut">
+            <string>Space</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="save_button_2">
+       <property name="toolTip">
+        <string>Zapisz wszystkie zmiany i przejdź do następniego kroku.</string>
+       </property>
+       <property name="text">
+        <string>Zapisz wszystkie</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>go_left_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
-   <slot>translateWord()</slot>
+   <receiver>mostFrequentList</receiver>
+   <slot>previousWord()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>531</x>
-     <y>261</y>
+     <x>93</x>
+     <y>99</y>
     </hint>
     <hint type="destinationlabel">
-     <x>111</x>
-     <y>-11</y>
+     <x>168</x>
+     <y>9</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>go_right_button</sender>
+   <sender>go_right_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
+   <receiver>mostFrequentList</receiver>
    <slot>nextWord()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>629</x>
-     <y>128</y>
+     <x>596</x>
+     <y>98</y>
     </hint>
     <hint type="destinationlabel">
-     <x>351</x>
-     <y>33</y>
+     <x>407</x>
+     <y>6</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>go_left_button</sender>
+   <sender>not_known_button_2</sender>
    <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
-   <slot>perviousWord()</slot>
+   <receiver>mostFrequentList</receiver>
+   <slot>updateScore()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>78</x>
-     <y>100</y>
+     <x>285</x>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
-     <x>217</x>
-     <y>29</y>
+     <x>295</x>
+     <y>3</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>save_button</sender>
+   <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
+   <receiver>mostFrequentList</receiver>
+   <slot>translateWord()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>465</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>464</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>known_button_2</sender>
+   <signal>clicked()</signal>
+   <receiver>mostFrequentList</receiver>
+   <slot>updateScore()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_button_2</sender>
+   <signal>clicked()</signal>
+   <receiver>mostFrequentList</receiver>
    <slot>saveAndExit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>420</x>
-     <y>341</y>
+     <x>173</x>
+     <y>258</y>
     </hint>
     <hint type="destinationlabel">
-     <x>463</x>
-     <y>22</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>not_known_button</sender>
-   <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
-   <slot>updateScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>314</x>
-     <y>264</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>379</x>
-     <y>22</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>known_button</sender>
-   <signal>clicked()</signal>
-   <receiver>MostFrequentList</receiver>
-   <slot>updateScore()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>88</x>
-     <y>280</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>193</x>
-     <y>23</y>
+     <x>495</x>
+     <y>18</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>translateWord()</slot>
+  <slot>previousWord()</slot>
   <slot>nextWord()</slot>
-  <slot>perviousWord()</slot>
-  <slot>saveAndExit()</slot>
   <slot>updateScore()</slot>
+  <slot>translateWord()</slot>
+  <slot>saveAndExit()</slot>
  </slots>
 </ui>
