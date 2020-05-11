@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>config_dialog</class>
+ <widget class="QDialog" name="config_dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>210</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Config</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="1">
+    <widget class="QComboBox" name="word_lemma_combo">
+     <item>
+      <property name="text">
+       <string>WiktionaryAPI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>UltraLinguaAPI</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LinguaRobotAPI</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="db_file_label">
+     <property name="text">
+      <string>Database file:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="select_file_btn">
+     <property name="text">
+      <string>Select File</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="word_trans_combo">
+     <item>
+      <property name="text">
+       <string>Offline Database</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="word_scoring_combo">
+     <item>
+      <property name="text">
+       <string>TwinWordAPI</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="word_scoring_lbl">
+     <property name="text">
+      <string>Word scoring engine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="word_lemma_lbl">
+     <property name="text">
+      <string>Word lemmatization engine</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="word_trans_lbl">
+     <property name="text">
+      <string>Word translation engine</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
