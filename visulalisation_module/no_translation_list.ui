@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>602</width>
-    <height>295</height>
+    <height>294</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,86 +15,165 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="10,1">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetDefaultConstraint</enum>
-      </property>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="10,1">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3,1">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3,1">
+            <property name="spacing">
+             <number>14</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetNoConstraint</enum>
+            </property>
+            <item>
+             <widget class="QPushButton" name="go_left_button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>30</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;</string>
+              </property>
+              <property name="shortcut">
+               <string>Left</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="word_label">
+              <property name="minimumSize">
+               <size>
+                <width>256</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>MS Shell Dlg 2</family>
+                <pointsize>20</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="indent">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="go_right_button">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>30</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>&gt;</string>
+              </property>
+              <property name="shortcut">
+               <string>Right</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontal_layout" stretch="0,2,2">
           <property name="spacing">
-           <number>14</number>
+           <number>5</number>
           </property>
           <property name="sizeConstraint">
-           <enum>QLayout::SetNoConstraint</enum>
+           <enum>QLayout::SetFixedSize</enum>
           </property>
-          <item>
-           <widget class="QPushButton" name="go_left_button">
+          <property name="leftMargin">
+           <number>15</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QTextEdit" name="textEdit">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>30</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>&lt;</string>
-            </property>
-            <property name="shortcut">
-             <string>Left</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="word_label">
             <property name="minimumSize">
              <size>
               <width>256</width>
-              <height>0</height>
+              <height>50</height>
              </size>
             </property>
             <property name="font">
              <font>
-              <family>MS Shell Dlg 2</family>
               <pointsize>20</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-              <stylestrategy>PreferAntialias</stylestrategy>
              </font>
             </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
             </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-            <property name="textFormat">
-             <enum>Qt::AutoText</enum>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="indent">
-             <number>1</number>
+            <property name="placeholderText">
+             <string>Tłumaczenie</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="go_right_button">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
+           <widget class="QPushButton" name="pushButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
@@ -103,19 +182,30 @@
             </property>
             <property name="font">
              <font>
-              <pointsize>30</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>8</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>&gt;</string>
+             <string>Dodaj tłumaczenie</string>
             </property>
             <property name="shortcut">
-             <string>Right</string>
+             <string>Z</string>
             </property>
-            <property name="flat">
-             <bool>false</bool>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Usuń słowo</string>
+            </property>
+            <property name="shortcut">
+             <string>X</string>
             </property>
            </widget>
           </item>
@@ -124,90 +214,14 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontal_layout" stretch="0,2,2">
-        <property name="spacing">
-         <number>5</number>
+       <widget class="QPushButton" name="save_button">
+        <property name="toolTip">
+         <string>Zapisz wszystkie zmiany i przejdź do następniego kroku.</string>
         </property>
-        <property name="sizeConstraint">
-         <enum>QLayout::SetFixedSize</enum>
+        <property name="text">
+         <string>Zapisz wszyskie</string>
         </property>
-        <property name="leftMargin">
-         <number>15</number>
-        </property>
-        <property name="topMargin">
-         <number>5</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="bottomMargin">
-         <number>5</number>
-        </property>
-        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-         <widget class="QTextEdit" name="textEdit">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>256</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>20</pointsize>
-           </font>
-          </property>
-          <property name="focusPolicy">
-           <enum>Qt::ClickFocus</enum>
-          </property>
-          <property name="placeholderText">
-           <string>Tłumaczenie</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>8</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Dodaj tłumaczenie</string>
-          </property>
-          <property name="shortcut">
-           <string>Z</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Usuń słowo</string>
-          </property>
-          <property name="shortcut">
-           <string>X</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       </widget>
       </item>
      </layout>
     </item>

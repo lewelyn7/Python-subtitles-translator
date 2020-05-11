@@ -18,6 +18,8 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -103,6 +105,7 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         font.setStyleStrategy(QtGui.QFont.PreferAntialias)
         self.not_known_button.setFont(font)
+        self.not_known_button.setChecked(True)
         self.not_known_button.setObjectName("not_known_button")
         self.horizontal_layout.addWidget(self.not_known_button)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
@@ -120,7 +123,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.horizontal_layout)
         self.verticalLayout_2.setStretch(0, 3)
         self.verticalLayout_2.setStretch(1, 1)
-        self.gridLayout.addLayout(self.verticalLayout_2, 0, 0, 1, 1)
+        self.verticalLayout_3.addLayout(self.verticalLayout_2)
+        self.save_button = QtWidgets.QPushButton(self.centralwidget)
+        self.save_button.setObjectName("save_button")
+        self.verticalLayout_3.addWidget(self.save_button)
+        self.gridLayout.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 707, 21))
@@ -147,6 +154,8 @@ class Ui_MainWindow(object):
         self.not_known_button.setShortcut(_translate("MainWindow", "X"))
         self.pushButton.setText(_translate("MainWindow", "Tłumacz"))
         self.pushButton.setShortcut(_translate("MainWindow", "Space"))
+        self.save_button.setToolTip(_translate("MainWindow", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
+        self.save_button.setText(_translate("MainWindow", "Zapisz wszystkie"))
 
 
 if __name__ == "__main__":

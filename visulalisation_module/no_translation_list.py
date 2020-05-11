@@ -13,11 +13,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(602, 298)
+        MainWindow.resize(602, 294)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -118,7 +120,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.horizontal_layout)
         self.verticalLayout_2.setStretch(0, 10)
         self.verticalLayout_2.setStretch(1, 1)
-        self.gridLayout.addLayout(self.verticalLayout_2, 0, 0, 1, 1)
+        self.verticalLayout_3.addLayout(self.verticalLayout_2)
+        self.save_button = QtWidgets.QPushButton(self.centralwidget)
+        self.save_button.setObjectName("save_button")
+        self.verticalLayout_3.addWidget(self.save_button)
+        self.gridLayout.addLayout(self.verticalLayout_3, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 602, 21))
@@ -144,6 +150,8 @@ class Ui_MainWindow(object):
         self.pushButton.setShortcut(_translate("MainWindow", "Z"))
         self.pushButton_2.setText(_translate("MainWindow", "Usuń słowo"))
         self.pushButton_2.setShortcut(_translate("MainWindow", "X"))
+        self.save_button.setToolTip(_translate("MainWindow", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
+        self.save_button.setText(_translate("MainWindow", "Zapisz wszyskie"))
 
 
 if __name__ == "__main__":
