@@ -156,16 +156,3 @@ class Ui_load_srt(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("load_srt", "Config"))
 
 
-if __name__ == "__main__":
-    # import sys
-    # app = QtWidgets.QApplication(sys.argv)
-    # load_srt = QtWidgets.QDialog()
-    # ui = Ui_load_srt()
-    # ui.setupUi(load_srt)
-    # load_srt.show()
-    # sys.exit(app.exec_())
-
-    app = QtWidgets.QApplication(sys.argv)
-    load_srt = MyDialog()
-    sys.exit(app.exec_())
-
