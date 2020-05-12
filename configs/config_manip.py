@@ -1,6 +1,5 @@
 import yaml
 
-
 class Config:
     class __Config:
         def __init__(self, fname):

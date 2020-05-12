@@ -2,6 +2,7 @@ from visulalisation_module.load_srt import LoadSrtDialog
 from visulalisation_module.export import ExportDialog
 from visulalisation_module.no_translation_list import NoTranslationController
 from visulalisation_module.export import ExportDialog
+from visulalisation_module.most_frequent_list import MostFrequentController
 from database_integration_module.db_helpers import DbHelpers
 from PyQt5 import QtWidgets
 from configs.config_manip import Config
@@ -28,6 +29,7 @@ if __name__ == "__main__":
     load_srt = LoadSrtDialog(config)
     app.exec_()
 
+
     if load_srt.no_translations_words:
         no_translations = NoTranslationController(load_srt.no_translations_words)
         app.exec_()
@@ -40,6 +42,10 @@ if __name__ == "__main__":
         for item in translated_words:
             dbh.insert_basic_form(item[0], 5.0, item[1:])
             dbh.insert_known_word(item[0], item[0])
+
+    
+    most_frequent_words = dbh.get_most_frequent_words(10)
+    most_frequent = MostFrequentController(most_frequent_words)
 
 
     export_dialog = ExportDialog(config, [])

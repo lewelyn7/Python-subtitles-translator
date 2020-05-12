@@ -48,7 +48,8 @@ class DbHelpers(Exception):
     def get_most_frequent_words(self, frequency_treshold):
         Stats = Query()
         most_frequent_words = self.film_stats_table.search(Stats['frequency'] >= frequency_treshold)
-        return most_frequent_words
+        output = self.basic_forms_table.search(Query().doc_id in most_frequent_words['wordId'])
+        return output
     
     def insert_film_stats(self, wordID):
         self.film_stats_table.insert({'frequency': 1, 'wordID': wordID})
@@ -76,6 +77,15 @@ class DbHelpers(Exception):
     def add_to_blacklist(self, word):
         if not self.in_blacklist(word):
             self.blacklist_table.insert({'word': word})
+
+    def get_biggest_frequency(self):
+        words = self.film_stats_table.all()
+        most_frequent_word = words[0]
+        for word in words:
+            if most_frequent_word['frequency'] < word['frequency']:
+                most_frequent_word = word
+
+        return most_frequent_word['frequency']
     
     
 if __name__ == "__main__":
