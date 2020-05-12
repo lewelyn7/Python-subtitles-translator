@@ -36,7 +36,8 @@ translations = ["FirstTranslation",
 
 class TranslatorException(Exception):
     def __init__(self, msg):
-        super(self.__class__, self).__init__(msg)
+        # super(self.__class__, self).__init__(msg)
+        pass
 
 
 class Translation(object):

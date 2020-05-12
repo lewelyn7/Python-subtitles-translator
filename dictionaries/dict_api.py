@@ -1,5 +1,6 @@
 from tinydb import TinyDB, Query
 
+
 class DictAPI:
     """ TODO  """
     def __init__(self, db_file):
