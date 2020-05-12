@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from no_translation_list_UI import UiNoTranslationList
+from .no_translation_list_UI import UiNoTranslationList
 
 class NoTranslationController(QtWidgets.QDialog):
     word_list = []

@@ -1,5 +1,7 @@
 from visulalisation_module.load_srt import LoadSrtDialog
 from visulalisation_module.export import ExportDialog
+from visulalisation_module.no_translation_list import NoTranslationController
+from database_integration_module.db_helpers import DbHelpers
 from PyQt5 import QtWidgets
 from configs.config_manip import Config
 import sys
@@ -15,8 +17,17 @@ if __name__ == "__main__":
     # sys.exit(app.exec_())
     config = Config("config.yaml")
     config.read()
+    dbh = DbHelpers(config.get()["database_filename"])
 
     sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)
     load_srt = LoadSrtDialog(config)
-    sys.exit(app.exec_())
+    app.exec_()
+    no_translations = NoTranslationController(load_srt.no_translations_words)
+    app.exec_()
+    black_list = no_translations.getBlacklist()
+    print(black_list)
+    for item in black_list:
+        dbh.add_to_blacklist(item)
+
+    sys.exit()

@@ -24,7 +24,7 @@ class DbHelpers(Exception):
             raise self.unchecked_get_exception
         Words = Query()
         basic_forms = self.known_words_table.search(Words['word'] == word)
-        basic_form_id = basic_forms[0].doc_id
+        basic_form_id = basic_forms[0]['basic_formID']
         basic_form = self.basic_forms_table.get(doc_id = basic_form_id)
         return basic_form
 

@@ -8,14 +8,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+
 
 class UiLoadSrt(object):
     def setupUi(self, load_srt):
         load_srt.setObjectName("load_srt")
-        load_srt.resize(600, 197)
+        load_srt.resize(600, 224)
         load_srt.setMinimumSize(QtCore.QSize(0, 10))
-        load_srt.setMaximumSize(QtCore.QSize(16777215, 197))
+        load_srt.setMaximumSize(QtCore.QSize(16777215, 224))
         self.gridLayout = QtWidgets.QGridLayout(load_srt)
         self.gridLayout.setObjectName("gridLayout")
         self.tabWidget = QtWidgets.QTabWidget(load_srt)
@@ -30,9 +30,6 @@ class UiLoadSrt(object):
         self.import_box.setObjectName("import_box")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.import_box)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.file_lbl = QtWidgets.QLabel(self.import_box)
-        self.file_lbl.setObjectName("file_lbl")
-        self.gridLayout_3.addWidget(self.file_lbl, 0, 0, 1, 1)
         self.select_file_btn = QtWidgets.QPushButton(self.import_box)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -49,6 +46,9 @@ class UiLoadSrt(object):
         self.load_btn.setSizePolicy(sizePolicy)
         self.load_btn.setObjectName("load_btn")
         self.gridLayout_3.addWidget(self.load_btn, 1, 0, 1, 2)
+        self.file_lbl = QtWidgets.QLabel(self.import_box)
+        self.file_lbl.setObjectName("file_lbl")
+        self.gridLayout_3.addWidget(self.file_lbl, 0, 0, 1, 1)
         self.progressBar = QtWidgets.QProgressBar(self.import_box)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -58,6 +58,10 @@ class UiLoadSrt(object):
         self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
         self.gridLayout_3.addWidget(self.progressBar, 2, 0, 1, 2)
+        self.proceed_btn = QtWidgets.QPushButton(self.import_box)
+        self.proceed_btn.setEnabled(False)
+        self.proceed_btn.setObjectName("proceed_btn")
+        self.gridLayout_3.addWidget(self.proceed_btn, 3, 0, 1, 2)
         self.gridLayout_2.addWidget(self.import_box, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -127,21 +131,23 @@ class UiLoadSrt(object):
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
         self.retranslateUi(load_srt)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.select_file_btn.clicked.connect(load_srt.open_file_dialog)
         self.load_btn.clicked.connect(load_srt.load_file_action)
         self.select_file_btn_2.clicked.connect(load_srt.open_database_file)
         self.word_scoring_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
         self.word_lemma_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
         self.word_trans_combo.currentIndexChanged['QString'].connect(load_srt.API_settings_changed)
+        self.proceed_btn.clicked.connect(load_srt.proceed_clicked)
         QtCore.QMetaObject.connectSlotsByName(load_srt)
 
     def retranslateUi(self, load_srt):
         _translate = QtCore.QCoreApplication.translate
         load_srt.setWindowTitle(_translate("load_srt", "Load srt file"))
-        self.file_lbl.setText(_translate("load_srt", "File: "))
         self.select_file_btn.setText(_translate("load_srt", "Select file"))
         self.load_btn.setText(_translate("load_srt", "Load"))
+        self.file_lbl.setText(_translate("load_srt", "File: "))
+        self.proceed_btn.setText(_translate("load_srt", "-"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("load_srt", "Import"))
         self.db_file_label.setText(_translate("load_srt", "Database file:"))
         self.select_file_btn_2.setText(_translate("load_srt", "Select File"))
@@ -156,3 +162,11 @@ class UiLoadSrt(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("load_srt", "Config"))
 
 
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    load_srt = QtWidgets.QDialog()
+    ui = Ui_load_srt()
+    ui.setupUi(load_srt)
+    load_srt.show()
+    sys.exit(app.exec_())

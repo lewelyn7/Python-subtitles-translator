@@ -6,7 +6,7 @@ from os import getcwd
 from srt_parsing_modules.srt_parser import srt_to_line, line_to_tokens
 from filters.word_filter import WordFilter, LemmaAPIError
 from dictionaries.dict_api import DictAPI
-from database_integration_module.db_helpers import db_helpers
+from database_integration_module.db_helpers import DbHelpers
 #co poradzic co poradzic
 def process_srt_file(filename, bar, config):
     dictapi = DictAPI("dictionaries/eng_pol_dict.json")
@@ -15,9 +15,9 @@ def process_srt_file(filename, bar, config):
     no_translations = []
     no_lemma = []
 
-    dbh = db_helpers(config.get()["database_filename"])
+    dbh = DbHelpers(config.get()["database_filename"])
 
-    interpunction = "!@#$%^&*()_-=+`~[]\\{}|:\";''<>?,./".split()
+    interpunction = "!@#$%^&*()_-=+`~[]\\{}|:\";''<>?,./"
     last_token = ""
     try:
         fil = open(filename)
@@ -41,7 +41,10 @@ def process_srt_file(filename, bar, config):
             elif token.isupper():
                 print(token + " strange upper word")
                 pass # it means that token is strange uppercase word
+            elif dbh.in_blacklist(token.lower()):
+                print(token + " w blacklist")
             else:
+                token = token.lower()
                 if dbh.is_word_known(token):
                     basic_form= dbh.get_basic_form(token)
                     print(token  + " slowo jest znane slowo")
@@ -50,7 +53,7 @@ def process_srt_file(filename, bar, config):
                     try:
                         basic_form = flAPI.filter(token)
                     except LemmaAPIError:
-                        no_lemma.append([token])
+                        no_translations.append([token])
                     else:
                         if dbh.is_word_known(basic_form):
                             print(token + " slowo nie jest znane ale basic juz jest")
@@ -70,17 +73,18 @@ def process_srt_file(filename, bar, config):
                                     translations.insert(0, "*" + basic_form)
                                 else:
                                     no_translations.append([token])
+                                    continue
                             
                             dbh.insert_basic_form(token, 5.0, translations)
                             dbh.insert_known_word(token, token)
             last_token = token
         lines_processed += 1
         bar_val = round(lines_processed/lines_num*100.0)
-        if(bar_val > 94):
-            bar_val = 95
+        if(bar_val > 97):
+            bar_val = 98
         bar.setValue(bar_val)
     bar.setValue(100)
-    return (no_translations, no_lemma)
+    return no_translations
 
 class LoadSrtDialog(QtWidgets.QDialog):
     def __init__(self, config):
@@ -99,8 +103,15 @@ class LoadSrtDialog(QtWidgets.QDialog):
         self.show()
     def load_file_action(self): #srt file I mean
         self.ui.load_btn.setText("loading...")
-        tup = process_srt_file(self.filename, self.ui.progressBar, self.config)
-        print(tup)
+        self.no_translations_words = process_srt_file(self.filename, self.ui.progressBar, self.config)
+        self.ui.load_btn.setText("loaded")
+        self.ui.proceed_btn.setEnabled(True)
+        self.ui.load_btn.setEnabled(False)
+        self.ui.proceed_btn.setText("proceed")
+       
+    def proceed_clicked(self):
+        self.close()
+
 
     def open_file_dialog(self): # srt file
         fname = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file', getcwd())
@@ -109,6 +120,7 @@ class LoadSrtDialog(QtWidgets.QDialog):
             self.ui.select_file_btn.setText("select file")
         else:
             self.ui.select_file_btn.setText(self.filename.split("/")[-1])
+    
         
     def open_database_file(self):
         fname = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file', getcwd())
