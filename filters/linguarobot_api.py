@@ -16,7 +16,7 @@ class LinguaRobotAPI(LemmatizationAPI):
         self.word = word
         self.response = requests.request("GET", self.url + word, headers=self.headers)
 
-        if self.response.status_code != 200:
+        if self.response.status_code != 200 or len(json.loads(self.response.text)["entries"]) == 0:
             print("Request returned " + str(self.response.status_code) + " status code")
             raise LemmaAPIError
 
@@ -38,7 +38,12 @@ class LinguaRobotAPI(LemmatizationAPI):
         return self.verb_info["lemma"]
 
     def is_noun_plural(self):
-        return self.noun_info["forms"][0]["grammar"][0]["number"] == "plural"
+        try:
+            val = (self.noun_info["forms"][0]["grammar"][0]["number"] == "plural")
+        except KeyError:
+            return False
+        else:
+            return val
 
     def get_singular_noun(self):
         return self.noun_info["lemma"]

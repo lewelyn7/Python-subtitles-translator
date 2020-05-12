@@ -18,5 +18,5 @@ if __name__ == "__main__":
 
     sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)
-    load_srt = ExportDialog(config)
+    load_srt = LoadSrtDialog(config)
     sys.exit(app.exec_())

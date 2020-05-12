@@ -3,6 +3,7 @@ from .linguarobot_api import LinguaRobotAPI
 from. conjugation_en_api import ConjugationAPI
 from .ultralingua_api import UltraLinguaAPI
 from .twinword_api import TwinwordAPI
+from .lemmatization_api_ABC import LemmaAPIError
 
 class WordFilter:
     def __init__(self):
@@ -13,6 +14,7 @@ class WordFilter:
         """ returns form of a word that should be put in the database,
             so it's either basic form of a word or conjungated form in case of
             irregular conjungation """
+        word = word.lower()
         self.engine.fetch(word)
         part_of_speeches = self.engine.part_of_speeches
 
