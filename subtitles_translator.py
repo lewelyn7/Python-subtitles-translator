@@ -3,7 +3,7 @@ from csv_manip.csv_importer import csv_importer
 from filters.word_filter import WordFilter
 from tinydb import TinyDB, Query
 from dictionaries.dict_api import DictAPI
-from database_integration_module.db_helpers import db_helpers
+from database_integration_module.db_helpers import DbHelpers
 
 def db_insert_wrapper(db, word):
     qur = Query()

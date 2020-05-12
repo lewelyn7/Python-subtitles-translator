@@ -1,25 +1,27 @@
 from tinydb import TinyDB, Query
 
-class db_helpers:
+
+class DbHelpers(Exception):
+    unchecked_get_exception = Exception("Getter used without checking if the value exists.")
+
     def __init__(self,db_path):
         self.db = TinyDB(db_path)
         self.known_words_table = self.db.table('known_words')
         self.basic_forms_table = self.db.table('basic_forms')
         self.film_stats_table = self.db.table('film_stats')
+        self.blacklist_table = self.db.table('blacklist')
 
         
     def is_word_known(self, word):
         Words = Query()
         found_word = self.known_words_table.search(Words['word'] == word)
-        #try catch here later
         if found_word:
             return True
         return False
 
     def get_word(self, word):
-        #try catch here later
         if not self.is_word_known(word):
-            return None
+            raise self.unchecked_get_exception
         Words = Query()
         basic_forms = self.known_words_table.search(Words['word'] == word)
         basic_form_id = basic_forms[0].doc_id
@@ -60,16 +62,27 @@ class db_helpers:
     def insert_known_word(self, word, word_basic_form):
         Forms = Query()
         basic_forms = self.basic_forms_table.search(Forms['word'] == word_basic_form)
-        #try catch here
         if not basic_forms:
-            print('no basic form')
-            return None
+            raise self.unchecked_get_exception
         self.known_words_table.insert({'word': word, 'basic_formID': basic_forms[0].doc_id})
         return
+
+    def in_blacklist(self, word):
+        blacklisted_words = self.blacklist_table.search(Query()['word'] == word)
+        if len(blacklisted_words)==0:
+            return False
+        return True
+        
+    def add_to_blacklist(self, word):
+        if not self.in_blacklist(word):
+            self.blacklist_table.insert({'word': word})
     
     
 if __name__ == "__main__":
-    db = db_helpers('db.json')
-    db.increment_frequency('apples')
-    print(db.get_most_frequent_words(1))
+    db = DbHelpers('db.json')
+    db.add_to_blacklist('jabadaba')
+    if db.in_blacklist('jabadaba'):
+        print('jest')
+    else:
+        print('niema')
 

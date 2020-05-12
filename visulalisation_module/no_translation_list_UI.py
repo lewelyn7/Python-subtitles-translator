@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_noTranslationList(object):
+class UiNoTranslationList(object):
     def setupUi(self, noTranslationList):
         noTranslationList.setObjectName("noTranslationList")
         noTranslationList.resize(475, 300)
@@ -143,7 +143,7 @@ class Ui_noTranslationList(object):
         self.translationText.setPlaceholderText(_translate("noTranslationList", "Tłumaczenie"))
         self.addTranslationButton.setText(_translate("noTranslationList", "Dodaj tłumaczenie"))
         self.addTranslationButton.setShortcut(_translate("noTranslationList", "Z"))
-        self.deleteWordButton.setText(_translate("noTranslationList", "Usuń słowo"))
+        self.deleteWordButton.setText(_translate("noTranslationList", "Ignoruj słowo"))
         self.deleteWordButton.setShortcut(_translate("noTranslationList", "X"))
         self.saveButton.setToolTip(_translate("noTranslationList", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
         self.saveButton.setText(_translate("noTranslationList", "Zapisz wszyskie"))
