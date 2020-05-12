@@ -44,10 +44,10 @@ if __name__ == "__main__":
             dbh.insert_known_word(item[0], item[0])
 
     
-    most_frequent_words = dbh.get_most_frequent_words(10)
-    most_frequent = MostFrequentController(most_frequent_words)
+    # most_frequent_words = dbh.get_most_frequent_words(10)
+    # most_frequent = MostFrequentController(most_frequent_words)
 
-
-    export_dialog = ExportDialog(config, [])
+    test_dic_list = [{"word": "next", "translation": "nastepny"}, {"word": "today", "translation": "dzisiaj"}]
+    export_dialog = ExportDialog(config, test_dic_list)
     app.exec_()
     sys.exit()
