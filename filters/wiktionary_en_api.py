@@ -1,5 +1,6 @@
 from wiktionaryparser import WiktionaryParser
 import re
+from .lemmatization_api_ABC import LemmatizationAPI, LemmaAPIError
 
 class WiktionaryEnAPI:
     def __init__(self):

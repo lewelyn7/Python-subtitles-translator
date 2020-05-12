@@ -1,5 +1,9 @@
-from csv import reader
+from csv import reader, Error
 import re
+
+class ImportError(Exception):
+    pass
+
 
 class csv_importer:
     """Importer for using with Anki or Quizlet, file should be in csv format with comma as a delitmer
@@ -15,23 +19,31 @@ class csv_importer:
             self.firstcol = firstcol
         except AssertionError as inst:
             print("assert error", inst.args)
+
     def read(self):
         """ returns an iterator over tuple of words (word, translation) in csvfile"""
         try:
             csvfile = open(self.filename)
         except IOError:
             print("can't open csv file")
+            csvfile.close()
+            raise ImportError
         else:
-            csvreader = reader(csvfile)
-            if self.header == True:
-                next(csvreader)
-            for row in csvreader:
-                # normalize strings
-                row[0] = row[0].lower().strip()
-                row[1] = row[1].lower().strip()
-                if self.firstcol == "mylang":
-                    yield (row[0], row[1])
-                else:
-                    yield (row[1], row[0])
+            try:
+                csvreader = reader(csvfile)
+                if self.header == True:
+                    next(csvreader)
+                for row in csvreader:
+                    # normalize strings
+                    row[0] = row[0].lower().strip()
+                    row[1] = row[1].lower().strip()
+                    if self.firstcol == "mylang":
+                        yield (row[0], row[1])
+                    else:
+                        yield (row[1], row[0])
+            except Error:
+                raise ImportError
+            finally:
+                csvfile.close()
         
 

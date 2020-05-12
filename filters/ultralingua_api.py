@@ -1,5 +1,6 @@
 import requests
 import json
+from .lemmatization_api_ABC import LemmatizationAPI, LemmaAPIError
 
 class UltraLinguaAPI():
     def __init__(self):
@@ -9,7 +10,9 @@ class UltraLinguaAPI():
     def fetch(self, word):
         self.word = word
         self.word_info = requests.request("GET", "https://api.ultralingua.com/api/2.0/lemmas/en/" + word + "?key=" + self.key)
-        assert self.word_info.status_code == 200, "Request returned wrong status code"
+        if self.word_info.status_code != 200:
+            print("Request returned " + str(self.word_info.status_code) + " status code")
+            raise LemmaAPIError
         self.part_of_speeches = []
         for item in self.word_info:
             self.part_of_speeches.append(item["partofspeech"]["partofspeechcategory"])

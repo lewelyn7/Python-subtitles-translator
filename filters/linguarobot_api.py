@@ -1,7 +1,8 @@
 import requests
 import json
+from .lemmatization_api_ABC import LemmatizationAPI, LemmaAPIError
 
-class LinguaRobotAPI():
+class LinguaRobotAPI(LemmatizationAPI):
     """Here we have 2,5k/day so a little better, support for lemmatization"""
 
     def __init__(self):
@@ -15,7 +16,9 @@ class LinguaRobotAPI():
         self.word = word
         self.response = requests.request("GET", self.url + word, headers=self.headers)
 
-        assert self.response.status_code == 200, "Request returned " + str(self.response.status_code) + " status code"
+        if self.response.status_code != 200:
+            print("Request returned " + str(self.response.status_code) + " status code")
+            raise LemmaAPIError
 
         self.word_info = json.loads(self.response.text)["entries"][0]
 
@@ -30,8 +33,8 @@ class LinguaRobotAPI():
     def is_verb_conjugated(self):
         root = self.get_basic_verb()
         return root != self.word
-    
-    def get_basic_verb(self):
+
+    def get_basic_verb(self):   
         return self.verb_info["lemma"]
 
     def is_noun_plural(self):
