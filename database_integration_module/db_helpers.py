@@ -1,7 +1,7 @@
 from tinydb import TinyDB, Query
 
 
-class db_helpers(Exception):
+class DbHelpers(Exception):
     unchecked_get_exception = Exception("Getter used without checking if the value exists.")
 
     def __init__(self,db_path):
@@ -79,7 +79,7 @@ class db_helpers(Exception):
     
     
 if __name__ == "__main__":
-    db = db_helpers('db.json')
+    db = DbHelpers('db.json')
     db.add_to_blacklist('jabadaba')
     if db.in_blacklist('jabadaba'):
         print('jest')

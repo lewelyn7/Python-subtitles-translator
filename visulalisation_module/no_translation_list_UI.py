@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_noTranslationList(object):
+class UiNoTranslationList(object):
     def setupUi(self, noTranslationList):
         noTranslationList.setObjectName("noTranslationList")
         noTranslationList.resize(475, 300)

@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
-class Ui_load_srt(object):
+class UiLoadSrt(object):
     def setupUi(self, load_srt):
         load_srt.setObjectName("load_srt")
         load_srt.resize(600, 197)

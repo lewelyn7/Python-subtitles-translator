@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from .load_srt_UI import Ui_load_srt
+from .load_srt_UI import UiLoadSrt
 from configs.config_manip import Config
 from os import getcwd
 class LoadSrtDialog(QtWidgets.QDialog):
@@ -8,7 +8,7 @@ class LoadSrtDialog(QtWidgets.QDialog):
 
         self.config = config
 
-        self.ui = Ui_load_srt()
+        self.ui = UiLoadSrt()
         self.ui.setupUi(self)
         self.cfg = self.config.get()
         self.ui.word_lemma_combo.setCurrentText(self.cfg["word_lemmatization_API"])

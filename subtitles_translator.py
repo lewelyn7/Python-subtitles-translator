@@ -3,7 +3,7 @@ from csv_importer import csv_importer
 from filters.word_filter import WordFilter
 from tinydb import TinyDB, Query
 from dictionaries.dict_api import DictAPI
-from database_integration_module.db_helpers import db_helpers
+from database_integration_module.db_helpers import DbHelpers
 
 def db_insert_wrapper(db, word):
     qur = Query()
@@ -15,7 +15,7 @@ def process_srt_file(filename):
     dictapi = DictAPI("dictionaries/eng_pol_dict.json")
     flAPI = WordFilter()
 
-    dbh = db_helpers("db_test.json")
+    dbh = DbHelpers("db_test.json")
 
     interpunction = "!@#$%^&*()_-=+`~[]\\{}|:\";''<>?,./".split()
     last_token = ""
