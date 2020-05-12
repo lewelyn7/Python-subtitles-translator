@@ -4,6 +4,7 @@ from no_translation_list_UI import Ui_noTranslationList
 
 class NoTranslationController(QtWidgets.QDialog):
     wordList = []
+    blacklist = []
     iterator = 0
     def __init__(self, wordList):
         super().__init__()
@@ -29,13 +30,11 @@ class NoTranslationController(QtWidgets.QDialog):
     def saveAndExit(self):
         output = []
         for word in self.wordList:
-            if len(word)!=1:
+            if len(word)>1:
                 output.append(word)
         self.wordList = output
         self.close()
         
-
-
     def addTranslation(self):
         translation = self.ui.translationText.toPlainText()
         if len(translation) == 0:
@@ -45,6 +44,7 @@ class NoTranslationController(QtWidgets.QDialog):
         self.ui.translationText.clear()
     
     def deleteWord(self):
+        self.blacklist.append(self.wordList[self.iterator][0])
         if len(self.wordList) <= 1:
             self.saveAndExit()
             return
@@ -58,12 +58,15 @@ class NoTranslationController(QtWidgets.QDialog):
         
     def getList(self):
         return self.wordList
+
+    def getBlacklist(self):
+        return self.blacklist
     
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     load_srt = NoTranslationController([['apple'], ['pear'], ['orange'], ['pineaple']])
-    sys.exit(app.exec_())
-    list1 = load_srt.getList()
-    print(list1)
+    app.exec_()
+    print(load_srt.getList())
+    print(load_srt.getBlacklist())
     

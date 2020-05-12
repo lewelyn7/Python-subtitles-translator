@@ -6,6 +6,7 @@ class db_helpers:
         self.known_words_table = self.db.table('known_words')
         self.basic_forms_table = self.db.table('basic_forms')
         self.film_stats_table = self.db.table('film_stats')
+        self.blacklist_table = self.db.table('blacklist')
 
         
     def is_word_known(self, word):
@@ -66,10 +67,23 @@ class db_helpers:
             return None
         self.known_words_table.insert({'word': word, 'basic_formID': basic_forms[0].doc_id})
         return
+
+    def in_blacklist(self, word):
+        blacklisted_words = self.blacklist_table.search(Query()['word'] == word)
+        if len(blacklisted_words)==0:
+            return False
+        return True
+        
+    def add_to_blacklist(self, word):
+        if not self.in_blacklist(word):
+            self.blacklist_table.insert({'word': word})
     
     
 if __name__ == "__main__":
     db = db_helpers('db.json')
-    db.increment_frequency('apples')
-    print(db.get_most_frequent_words(1))
+    db.add_to_blacklist('jabadaba')
+    if db.in_blacklist('jabadaba'):
+        print('jest')
+    else:
+        print('niema')
 
