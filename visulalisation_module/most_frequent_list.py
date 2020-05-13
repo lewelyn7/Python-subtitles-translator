@@ -5,6 +5,8 @@ from .most_frequent_list_UI import Ui_mostFrequentList
 class MostFrequentController(QtWidgets.QDialog):
     wordList = []
     iterator = 0
+    isTranslated = 0
+
     def __init__(self, wordList):
         super().__init__()
         self.wordList = wordList
@@ -14,12 +16,18 @@ class MostFrequentController(QtWidgets.QDialog):
         self.show()
 
     def translateWord(self):
-        isTranslated = self.wordList[self.iterator].index(self.ui.word_label_2.text())
-        self.ui.word_label_2.setText(self.wordList[self.iterator][(isTranslated+1)%2])
+        self.isTranslated = (self.isTranslated+1)%2
+        
+        if self.isTranslated == 0:
+            self.ui.word_label_2.setText(self.wordList[self.iterator][0])
+        else:
+             self.ui.word_label_2.setText(self.makeReadable(self.wordList[self.iterator][1]))
     
     def nextWord(self):
         if self.iterator < len(self.wordList)-1:
             self.iterator+=1
+            self.isTranslated=0
+            self.translateWord
         self.ui.word_label_2.setText(self.wordList[self.iterator][0])
         if self.wordList[self.iterator][2] == 0:
             self.ui.not_known_button_2.setChecked(True)
@@ -29,6 +37,8 @@ class MostFrequentController(QtWidgets.QDialog):
     def previousWord(self):
         if self.iterator > 0:
             self.iterator-=1
+            self.isTranslated=0
+            self.translateWord
         self.ui.word_label_2.setText(self.wordList[self.iterator][0])
         if self.wordList[self.iterator][2] == 0:
             self.ui.not_known_button_2.setChecked(True)
@@ -48,6 +58,12 @@ class MostFrequentController(QtWidgets.QDialog):
         
     def getList(self):
         return self.wordList
+
+    def makeReadable(self, words):
+        pass
+
+    def getScore(self):
+        pass
     
 
 if __name__ == "__main__":

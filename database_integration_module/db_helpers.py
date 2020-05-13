@@ -49,14 +49,15 @@ class DbHelpers(Exception):
         most_frequent_words = [stat['wordID'] for stat in self.film_stats_table.all()]
         output = []
         for id in most_frequent_words:
-            output.append(db.basic_forms_table.get(doc_id = id))
+            output.append(self.basic_forms_table.get(doc_id = id))
         return output
 
     def get_most_frequent_words(self, treshold):
         most_frequent_words = [stat['wordID'] for stat in self.film_stats_table.search(Query()['frequency']>=treshold)]
         output = []
         for id in most_frequent_words:
-            output.append(db.basic_forms_table.get(doc_id = id))
+            output.append(self.basic_forms_table.get(doc_id = id))
+        output = [[value['word'], value['translations'], 0] for value in output]
         return output
     
     def insert_film_stats(self, wordID):
@@ -98,5 +99,5 @@ class DbHelpers(Exception):
     
 if __name__ == "__main__":
     db = DbHelpers('db.json')
-    print(db.get_most_frequent_words(20))
+    print(db.get_most_frequent_words(1))
 
