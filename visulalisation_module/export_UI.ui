@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>811</width>
-    <height>239</height>
+    <width>751</width>
+    <height>316</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,7 +22,7 @@
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>239</height>
+    <height>316</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -148,17 +148,17 @@
              <string/>
             </property>
             <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0">
-              <widget class="QLabel" name="column_separator_label">
-               <property name="text">
-                <string>column Separator</string>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="1">
               <widget class="QLabel" name="record_separator_label">
                <property name="text">
                 <string>new record separator</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="column_separator_label">
+               <property name="text">
+                <string>column Separator</string>
                </property>
               </widget>
              </item>
@@ -167,6 +167,20 @@
                <property name="text">
                 <string>;</string>
                </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QComboBox" name="column_order_combo">
+               <item>
+                <property name="text">
+                 <string>translation first</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>word first</string>
+                </property>
+               </item>
               </widget>
              </item>
              <item row="1" column="1">
@@ -183,28 +197,21 @@
                </item>
               </widget>
              </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="column_order_lbl">
+               <property name="text">
+                <string>Column order:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QCheckBox" name="checkBox">
+               <property name="text">
+                <string>Include header</string>
+               </property>
+              </widget>
+             </item>
             </layout>
-           </widget>
-          </item>
-          <item row="2" column="0" colspan="2">
-           <widget class="QLabel" name="column_order_lbl">
-            <property name="text">
-             <string>Column order:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2" colspan="2">
-           <widget class="QComboBox" name="column_order_combo">
-            <item>
-             <property name="text">
-              <string>translation first</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>word first</string>
-             </property>
-            </item>
            </widget>
           </item>
           <item row="3" column="1" colspan="2">
@@ -232,8 +239,8 @@
    <slot>select_file()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>409</x>
-     <y>94</y>
+     <x>549</x>
+     <y>141</y>
     </hint>
     <hint type="destinationlabel">
      <x>251</x>
@@ -248,12 +255,12 @@
    <slot>column_sep_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>193</x>
-     <y>134</y>
+     <x>219</x>
+     <y>212</y>
     </hint>
     <hint type="destinationlabel">
      <x>356</x>
-     <y>-9</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -264,8 +271,8 @@
    <slot>record_sep_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>660</x>
-     <y>134</y>
+     <x>454</x>
+     <y>212</y>
     </hint>
     <hint type="destinationlabel">
      <x>565</x>
@@ -280,8 +287,8 @@
    <slot>column_order_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>549</x>
-     <y>170</y>
+     <x>590</x>
+     <y>212</y>
     </hint>
     <hint type="destinationlabel">
      <x>678</x>
@@ -296,12 +303,12 @@
    <slot>export_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>365</x>
-     <y>205</y>
+     <x>549</x>
+     <y>260</y>
     </hint>
     <hint type="destinationlabel">
      <x>131</x>
-     <y>-1</y>
+     <y>0</y>
     </hint>
    </hints>
   </connection>
@@ -312,12 +319,28 @@
    <slot>file_extension_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>716</x>
-     <y>81</y>
+     <x>726</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
      <x>160</x>
-     <y>-5</y>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>export_dialog</receiver>
+   <slot>header_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>195</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>11</y>
     </hint>
    </hints>
   </connection>
@@ -328,5 +351,6 @@
   <slot>column_order_changed()</slot>
   <slot>export_clicked()</slot>
   <slot>file_extension_changed()</slot>
+  <slot>header_changed()</slot>
  </slots>
 </ui>

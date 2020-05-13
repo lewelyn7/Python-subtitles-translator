@@ -20,6 +20,8 @@ class ExportDialog(QtWidgets.QDialog):
         self.col_order = "translation first"
         self.filename = ""
         self.rec_sep = "\n"
+        self.include_header = False
+        self.file_extension = "csv"
 
     def select_file(self):
         fname = QtWidgets.QFileDialog.getSaveFileName(self, 'Open file', getcwd())
@@ -39,22 +41,29 @@ class ExportDialog(QtWidgets.QDialog):
             self.col_order = "word first"      
 
     def column_sep_changed(self):
-        pass
+        self.col_sep = self.ui.column_separator_box.text()
 
-    def record_sep_changed(self):
-        pass
+    def record_sep_changed(self, word):
+        if word == "CR+NL":
+            self.rec_sep = "\r\n"
+        else:
+            self.rec_sep = "\n"
 
     def export_clicked(self):
         csv_exporter = CsvExporter()
         try:
-            csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep)
+            csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header)
             print("exported")
             self.ui.export_btn.setText("exported")
             self.ui.export_btn.setEnabled(False)
         except ExportError:
             print("not exported - error")
         
-    def file_extension_changed(self):
-        pass
+    def file_extension_changed(self, word):
+        self.file_extension = word
+
+    def header_changed(self):
+        self.include_header = self.ui.checkBox.isChecked()
+
     
 
