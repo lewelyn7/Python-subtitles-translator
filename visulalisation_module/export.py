@@ -16,6 +16,16 @@ class ExportDialog(QtWidgets.QDialog):
         self.ui.setupUi(self)
         self.ui.export_btn.setEnabled(False)
         self.ui.label_2.setText(str(score) + '/' + str(max_score))
+        if self.score/self.max_score<0.3:
+            self.ui.label.setText("This is too hard for you!")
+        elif self.score/self.max_score<0.5:
+            self.ui.label.setText("This might be too much of a challange, consider trying something simpler first.")
+        elif self.score/self.max_score<0.7:
+            self.ui.label.setText("This is an appropriate challange. You will learn a lot from this one.")
+        elif self.score/self.max_score<0.9:
+            self.ui.label.setText("This is a great way to relax while polishing your skills.")
+        else:
+            self.ui.label.setText("Isn't it a bit to easy? ;)")
         self.cfg = self.config.get()
         self.word_list = word_list
         self.show()
