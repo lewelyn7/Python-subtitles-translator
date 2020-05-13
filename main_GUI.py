@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print(black_list)
     for item in black_list:
         dbh.add_to_blacklist(item)
-    most_frequent_words = dbh.get_most_frequent_words(10)
+    most_frequent_words = dbh.
     most_frequent = MostFrequentController(most_frequent_words)
 
     sys.exit()
