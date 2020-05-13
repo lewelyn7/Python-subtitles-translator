@@ -57,6 +57,7 @@ class DbHelpers(Exception):
         output = []
         for id in most_frequent_words:
             output.append(self.basic_forms_table.get(doc_id = id))
+        output = [[value['word'], value['translations'], 0] for value in output]
         return output
     
     def insert_film_stats(self, wordID):

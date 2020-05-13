@@ -44,8 +44,10 @@ if __name__ == "__main__":
             dbh.insert_basic_form(item[0], 5.0, item[1:])
             dbh.insert_known_word(item[0], item[0])
 
-    
-    most_frequent_words = dbh.get_most_frequent_words(10)
+    treshold = min(dbh.get_biggest_frequency()*0.7, 10)
+
+    most_frequent_words = dbh.get_most_frequent_words(treshold)
+    print(most_frequent_words)
     if most_frequent_words:
         most_frequent = MostFrequentController(most_frequent_words)
         app.exec_()
