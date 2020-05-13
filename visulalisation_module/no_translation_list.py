@@ -8,11 +8,13 @@ class NoTranslationController(QtWidgets.QDialog):
     iterator = 0
     def __init__(self, wordList):
         super().__init__()
+
         self.word_list = wordList
         self.ui = UiNoTranslationList()
         self.ui.setupUi(self)
         self.ui.word_label.setText(self.word_list[0][0])
         self.show()
+
 
     
     def nextWord(self):

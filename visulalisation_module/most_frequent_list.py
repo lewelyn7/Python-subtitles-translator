@@ -1,6 +1,6 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from most_frequent_list_UI import Ui_mostFrequentList
+from .most_frequent_list_UI import Ui_mostFrequentList
 
 class MostFrequentController(QtWidgets.QDialog):
     wordList = []

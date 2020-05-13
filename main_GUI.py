@@ -1,6 +1,7 @@
 from visulalisation_module.load_srt import LoadSrtDialog
 from visulalisation_module.export import ExportDialog
 from visulalisation_module.no_translation_list import NoTranslationController
+from visulalisation_module.export import ExportDialog
 from visulalisation_module.most_frequent_list import MostFrequentController
 from database_integration_module.db_helpers import DbHelpers
 from PyQt5 import QtWidgets
@@ -22,15 +23,32 @@ if __name__ == "__main__":
 
     sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)
+
+
+
     load_srt = LoadSrtDialog(config)
     app.exec_()
-    no_translations = NoTranslationController(load_srt.no_translations_words)
-    app.exec_()
-    black_list = no_translations.getBlacklist()
-    print(black_list)
-    for item in black_list:
-        dbh.add_to_blacklist(item)
-    most_frequent_words = dbh.
-    most_frequent = MostFrequentController(most_frequent_words)
 
+
+
+    if load_srt.no_translations_words:
+        no_translations = NoTranslationController(load_srt.no_translations_words)
+        app.exec_()
+        black_list = no_translations.getBlacklist()
+        print(black_list)
+        for item in black_list:
+            dbh.add_to_blacklist(item)
+
+        translated_words = no_translations.getList()
+        for item in translated_words:
+            dbh.insert_basic_form(item[0], 5.0, item[1:])
+            dbh.insert_known_word(item[0], item[0])
+
+    
+    # most_frequent_words = dbh.get_most_frequent_words(10)
+    # most_frequent = MostFrequentController(most_frequent_words)
+
+    test_dic_list = [{"word": "next", "translation": "nastepny"}, {"word": "today", "translation": "dzisiaj"}]
+    export_dialog = ExportDialog(config, test_dic_list)
+    app.exec_()
     sys.exit()
