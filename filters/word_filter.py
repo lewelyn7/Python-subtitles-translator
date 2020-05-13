@@ -7,7 +7,7 @@ from .lemmatization_api_ABC import LemmaAPIError
 
 class WordFilter:
     def __init__(self):
-        self.engine = LinguaRobotAPI()
+        self.engine = UltraLinguaAPI()
         self.conEngine = ConjugationAPI()
 
     def filter(self, word):

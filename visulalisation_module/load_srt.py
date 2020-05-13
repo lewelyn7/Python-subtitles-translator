@@ -32,7 +32,7 @@ def process_srt_file(filename, bar, config):
     lines_processed = 0
     for line in lines:
         for token in line_to_tokens(line):
-            print(token)
+            print(token, end=" ")
             if token in interpunction:
                 print(token + " interpunkcja")
             elif last_token != "." and token[0].isupper():

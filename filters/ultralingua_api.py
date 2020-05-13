@@ -13,6 +13,8 @@ class UltraLinguaAPI():
         if self.word_info.status_code != 200:
             print("Request returned " + str(self.word_info.status_code) + " status code")
             raise LemmaAPIError
+
+        self.word_info = json.loads(self.word_info.text)
         self.part_of_speeches = []
         for item in self.word_info:
             self.part_of_speeches.append(item["partofspeech"]["partofspeechcategory"])
