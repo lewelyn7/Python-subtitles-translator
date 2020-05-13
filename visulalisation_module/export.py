@@ -6,13 +6,16 @@ from os import getcwd
 from csv_manip.csv_exporter import CsvExporter, ExportError
 
 class ExportDialog(QtWidgets.QDialog):
-    def __init__(self, config, word_list):
+    def __init__(self, config, word_list, score, max_score):
         super(ExportDialog, self).__init__()
 
+        self.score = score
+        self.max_score = max_score
         self.config = config
         self.ui = Ui_export_dialog()
         self.ui.setupUi(self)
         self.ui.export_btn.setEnabled(False)
+        self.ui.label_2.setText(str(score) + '/' + str(max_score))
         self.cfg = self.config.get()
         self.word_list = word_list
         self.show()

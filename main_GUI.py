@@ -52,7 +52,11 @@ if __name__ == "__main__":
         most_frequent = MostFrequentController(most_frequent_words)
         app.exec_()
 
+    score = most_frequent.getScore()
+    print(score)
+    print(len(most_frequent_words))
+
     test_dic_list = [{"word": "next", "translation": "nastepny"}, {"word": "today", "translation": "dzisiaj"}]
-    export_dialog = ExportDialog(config, test_dic_list)
+    export_dialog = ExportDialog(config, test_dic_list, score, len(most_frequent_words))
     app.exec_()
     sys.exit()

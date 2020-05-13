@@ -63,7 +63,10 @@ class MostFrequentController(QtWidgets.QDialog):
         pass
 
     def getScore(self):
-        pass
+        output = 0
+        for word in self.wordList:
+            output+=word[2]
+        return output
     
 
 if __name__ == "__main__":
