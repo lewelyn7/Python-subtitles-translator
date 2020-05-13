@@ -99,6 +99,8 @@ class LoadSrtDialog(QtWidgets.QDialog):
         self.ui.word_scoring_combo.setCurrentText(self.cfg["word_scoring_API"])
         self.ui.word_trans_combo.setCurrentText(self.cfg["word_translation_API"])
         self.ui.select_file_btn_2.setText(self.cfg["database_filename"].split("/")[-1])
+
+        self.ui.load_btn.setEnabled(False)
         
         self.show()
     def load_file_action(self): #srt file I mean
@@ -118,7 +120,9 @@ class LoadSrtDialog(QtWidgets.QDialog):
         self.filename = fname[0]
         if(self.filename == ""):
             self.ui.select_file_btn.setText("select file")
+            self.ui.load_btn.setEnabled(False)
         else:
+            self.ui.load_btn.setEnabled(True)
             self.ui.select_file_btn.setText(self.filename.split("/")[-1])
     
         

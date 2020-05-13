@@ -15,7 +15,7 @@ class Config:
         if not Config.inst:
             Config.inst = Config.__Config(fname)
         else:
-            Config.inst.filename = fname
+            raise Exception("You tried to instantiate new Config. You can't do such things")
     
     def save(self):
         with open(Config.inst.filename, 'w') as outfile:

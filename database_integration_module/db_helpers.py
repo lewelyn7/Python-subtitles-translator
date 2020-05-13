@@ -96,6 +96,10 @@ class DbHelpers(Exception):
 
         return most_frequent_word['frequency']
     
+    def reset_film_stats(self):
+        self.db.drop_table('film_stats')
+        self.film_stats_table = self.db.table('film_stats')
+
     
 if __name__ == "__main__":
     db = DbHelpers('db.json')
