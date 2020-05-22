@@ -21,6 +21,8 @@ if __name__ == "__main__":
     config.read()
     dbh = DbHelpers(config.get()["database_filename"])
 
+    dbh.reset_film_stats()
+
     sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)
 
@@ -57,6 +59,8 @@ if __name__ == "__main__":
     print(len(most_frequent_words))
 
     test_dic_list = [{"word": "next", "translation": "nastepny"}, {"word": "today", "translation": "dzisiaj"}]
-    export_dialog = ExportDialog(config, test_dic_list, score, len(most_frequent_words))
+    to_be_exported = dbh.get_words_from_stats()
+    print(to_be_exported)
+    export_dialog = ExportDialog(config, to_be_exported, score, len(most_frequent_words))
     app.exec_()
     sys.exit()

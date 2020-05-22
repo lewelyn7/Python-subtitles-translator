@@ -5,6 +5,7 @@ class DbHelpers(Exception):
     unchecked_get_exception = Exception("Getter used without checking if the value exists.")
 
     def __init__(self,db_path):
+        self.db_path = db_path
         self.db = TinyDB(db_path)
         self.known_words_table = self.db.table('known_words')
         self.basic_forms_table = self.db.table('basic_forms')
@@ -36,6 +37,10 @@ class DbHelpers(Exception):
         basic_form = self.get_word(word)
         Stats = Query()
         stats = self.film_stats_table.search(Stats['wordID'] == basic_form.doc_id)
+        if not stats:
+            self.insert_film_stats(basic_form.doc_id)
+            stats = self.film_stats_table.search(Stats['wordID'] == basic_form.doc_id)
+            
         return stats[0]
 
     def increment_frequency(self, word):
@@ -70,6 +75,8 @@ class DbHelpers(Exception):
         return
 
     def insert_known_word(self, word, word_basic_form):
+        """ word, word_basic_form """
+        
         Forms = Query()
         basic_forms = self.basic_forms_table.search(Forms['word'] == word_basic_form)
         if not basic_forms:
@@ -97,8 +104,7 @@ class DbHelpers(Exception):
         return most_frequent_word['frequency']
     
     def reset_film_stats(self):
-        self.db.drop_table('film_stats')
-        self.film_stats_table = self.db.table('film_stats')
+        self.film_stats_table.purge()
 
     
 if __name__ == "__main__":

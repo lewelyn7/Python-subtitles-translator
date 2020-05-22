@@ -12,6 +12,7 @@ class csv_importer:
     def __init__(self, filename, header=False, firstcol="mylang"):
         """ Constructor accepts csv filename and optional header argument and order of words in csv fie.
          If translations are placed in first column, then firstcol should be set to "translations" """
+         
         try:
             assert re.match(".*\.csv$", filename), "file has wrong extension"
             self.filename = filename
@@ -22,6 +23,7 @@ class csv_importer:
 
     def read(self):
         """ returns an iterator over tuple of words (word, translation) in csvfile"""
+
         try:
             csvfile = open(self.filename)
         except IOError:

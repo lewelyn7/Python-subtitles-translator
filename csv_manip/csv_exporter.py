@@ -26,13 +26,14 @@ class CsvExporter:
                 csvwriter.writerow(row)                
 
             for item in word_list:
+                print(item["translations"])
                 row = []
                 if col_order == "translation first":
-                    row.append(item["translation"])
+                    row.append(str(item["translations"])) # TODO
                     row.append(item["word"])
                 else:
                     row.append(item["word"])
-                    row.append(item["translation"])
+                    row.append(item["translations"])
                 csvwriter.writerow(row)
         except Error:
             raise ExportError
