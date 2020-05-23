@@ -35,6 +35,7 @@ class ExportDialog(QtWidgets.QDialog):
         self.rec_sep = "\n"
         self.include_header = False
         self.file_extension = "csv"
+        self.translations_max = self.ui.translations_num_spin.value
 
     def select_file(self):
         fname = QtWidgets.QFileDialog.getSaveFileName(self, 'Open file', getcwd())
@@ -63,9 +64,11 @@ class ExportDialog(QtWidgets.QDialog):
             self.rec_sep = "\n"
 
     def export_clicked(self):
+        self.translations_max = int(self.ui.translations_num_spin.value())
+        print(self.translations_max)
         csv_exporter = CsvExporter()
         try:
-            csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header)
+            csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header, self.translations_max)
             print("exported")
             self.ui.export_btn.setText("exported")
             self.ui.export_btn.setEnabled(False)

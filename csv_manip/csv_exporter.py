@@ -8,7 +8,7 @@ class CsvExporter:
     def __init__(self):
         pass
 
-    def export(self, word_list, filename, col_order, col_sep, rec_sep, include_header):
+    def export(self, word_list, filename, col_order, col_sep, rec_sep, include_header, translations_max):
         """ word_list should be passed as list of dictionaries  TODO correct order"""
         
         outfile = open(filename, "w", newline=rec_sep)
@@ -26,10 +26,14 @@ class CsvExporter:
                 csvwriter.writerow(row)                
 
             for item in word_list:
-                print(item["translations"])
+                translations_string = ""
+                for i in range(translations_max):
+                    if i < len(item["translations"]):
+                        translations_string += item["translations"][i] # TODO string replace new line characters
+                        translations_string += " "
                 row = []
                 if col_order == "translation first":
-                    row.append(str(item["translations"])) # TODO
+                    row.append(translations_string)
                     row.append(item["word"])
                 else:
                     row.append(item["word"])

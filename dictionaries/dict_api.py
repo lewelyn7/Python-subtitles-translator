@@ -8,4 +8,9 @@ class DictAPI:
 
     def get_translation(self, word):
         qr = Query()
-        return [item["translations"] for item in self.db.search(qr.word == word)]
+        # return [item["translations"] for item in self.db.search(qr.word == word)]
+        val = self.db.search(qr.word == word)
+        if val:
+            return val[0]["translations"]
+        else:
+            return []

@@ -148,27 +148,6 @@
              <string/>
             </property>
             <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="1">
-              <widget class="QLabel" name="record_separator_label">
-               <property name="text">
-                <string>new record separator</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="column_separator_label">
-               <property name="text">
-                <string>column Separator</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLineEdit" name="column_separator_box">
-               <property name="text">
-                <string>;</string>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="2">
               <widget class="QComboBox" name="column_order_combo">
                <item>
@@ -181,6 +160,13 @@
                  <string>word first</string>
                 </property>
                </item>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="record_separator_label">
+               <property name="text">
+                <string>new record separator</string>
+               </property>
               </widget>
              </item>
              <item row="1" column="1">
@@ -197,6 +183,13 @@
                </item>
               </widget>
              </item>
+             <item row="1" column="3">
+              <widget class="QCheckBox" name="checkBox">
+               <property name="text">
+                <string>Include header</string>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="2">
               <widget class="QLabel" name="column_order_lbl">
                <property name="text">
@@ -204,10 +197,37 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="3">
-              <widget class="QCheckBox" name="checkBox">
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="column_separator_box">
                <property name="text">
-                <string>Include header</string>
+                <string>;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="column_separator_label">
+               <property name="text">
+                <string>column Separator</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="translations_num_lbl">
+               <property name="text">
+                <string>maximum number of translations:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QSpinBox" name="translations_num_spin">
+               <property name="minimum">
+                <number>0</number>
+               </property>
+               <property name="maximum">
+                <number>15</number>
+               </property>
+               <property name="value">
+                <number>3</number>
                </property>
               </widget>
              </item>
