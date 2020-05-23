@@ -29,7 +29,7 @@ class CsvExporter:
                 translations_string = ""
                 for i in range(translations_max):
                     if i < len(item["translations"]):
-                        translations_string += item["translations"][i] # TODO string replace new line characters
+                        translations_string += item["translations"][i].replace("\n", "")
                         translations_string += " "
                 row = []
                 if col_order == "translation first":

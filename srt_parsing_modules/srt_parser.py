@@ -89,13 +89,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
                             print(" slowo nie jest znane ale basic juz jest")
                             dbh.insert_known_word(token, filtered_word)
                         else:
-                            print(" kompletnie nie znane slowo")
-                            # co robimy jak jest nieregularna odmiana bo fajnie jest sie nauczyc nieregularnej odmiany 
-                            # ale z slownik nie przetlumaczy odmienionych slow
-                            # dlatego moznaby do bazy wrzucac odmienione slowo z tłumaczeniem nieodmienionego i dać adnnotacje
-                            # ze uwaga to jest odmienione  uzytkowniku sprawdz ta fiszke i ewentualnie popraw
-                            # albo co jak nie znaleziono tlumaczenia dla slowa
-                            # albo scoringu     
+                            print(" kompletnie nie znane slowo")  
                             translations = dictapi.get_translation(filtered_word)
                             if translations == []:
                                 translations = dictapi.get_translation(basic_form)
