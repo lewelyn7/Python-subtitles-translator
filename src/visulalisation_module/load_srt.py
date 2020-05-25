@@ -22,7 +22,7 @@ class LoadSrtDialog(QtWidgets.QDialog):
         self.ui.word_scoring_combo.setCurrentText(self.cfg["word_scoring_API"])
         self.ui.word_trans_combo.setCurrentText(self.cfg["word_translation_API"])
         self.ui.select_file_btn_2.setText(self.cfg["database_filename"].split("/")[-1])
-
+        self.no_translations_words = []
         self.ui.load_btn.setEnabled(False)
         
         self.show()
