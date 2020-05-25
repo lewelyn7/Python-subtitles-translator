@@ -8,7 +8,8 @@ class Config:
                 "database_filename": "",
                 "word_lemmatization_API": "",
                 "word_translation_API": "",
-                "word_scoring_API": ""
+                "word_scoring_API": "",
+                "logs_file": ""
             }
     inst = None
     def __init__(self, fname):

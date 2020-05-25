@@ -21,8 +21,15 @@ if __name__ == "__main__":
     config = Config("configs/config.yaml")
     config.read()
     dbh = DbHelpers(config.get()["database_filename"])
-
     dbh.reset_film_stats()
+
+    logger = logging.getLogger('main_logger')
+    err_stream_handler = logging.StreamHandler()
+    err_stream_handler.setLevel(logging.WARNING)
+    log_file_handler = logging.FileHandler(config.get()["logs_filename"])
+    log_file_handler.setLevel(logging.INFO)
+    logger.addHandler(log_file_handler)
+    logger.addHandler(err_stream_handler)
 
     # sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)

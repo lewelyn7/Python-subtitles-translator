@@ -1,7 +1,7 @@
 from ..dictionaries.dict_api import DictAPI
 from ..database_integration_module.db_helpers import DbHelpers
 from ..filters.word_filter import WordFilter, LemmaAPIError
-
+import logging
 def clean_line(line):
     cleaned_line=""
     for letter in line:
@@ -50,7 +50,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
     try:
         fil = open(filename)
     except IOError:
-        print("file cant be loaded")
+        logging.error("file cant be loaded")
         return False
     lines_num = 0
     for line in fil: lines_num += 1
@@ -60,36 +60,36 @@ def process_srt_file(filename, config, progress_bar_setter=None):
     lines_processed = 0
     for line in lines:
         for token in line_to_tokens(line):
-            print(token, end=" ")
             if token in interpunction:
-                print(" interpunkcja")
+                logging.info("%s - interpunction", token)
             elif last_token != "." and token[0].isupper():
-                print(" nazwa wlasna")
+                logging.info("%s - proper name", token)
                 pass # it means that token is nazwa wlasna
             elif token.isupper():
-                print(" strange upper word")
+                logging.info("%s - strange uppercase word", token)
                 pass # it means that token is strange uppercase word
             elif dbh.in_blacklist(token.lower()):
-                print(" w blacklist")
+                logging.info("%s - in black list", token)
             else:
                 token = token.lower()
                 if dbh.is_word_known(token):
                     basic_form = dbh.get_basic_form(token)
-                    print(" slowo jest znane")
+                    logging.info("%s - word is known", token)
+
                     dbh.increment_frequency(basic_form)
                 else:
                     try:
                         filtered_word = flAPI.filter(token)
                         basic_form = flAPI.get_basic_form()
                     except LemmaAPIError:
-                        print(" lemma api error")
+                        logging.error("%s - LemaAPIError", token)
                         no_translations.append([token])
                     else:
                         if dbh.is_word_known(filtered_word):
-                            print(" slowo nie jest znane ale basic juz jest")
+                            logging.info("%s - filtered form of that word is known", token)
                             dbh.insert_known_word(token, filtered_word)
                         else:
-                            print(" kompletnie nie znane slowo")  
+                            logging.info("%s - word is not known")
                             translations = dictapi.get_translation(filtered_word)
                             if translations == []:
                                 translations = dictapi.get_translation(basic_form)
