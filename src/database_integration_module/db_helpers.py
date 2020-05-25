@@ -104,7 +104,7 @@ class DbHelpers(Exception):
         return most_frequent_word['frequency']
     
     def reset_film_stats(self):
-        self.film_stats_table.purge()
+        self.film_stats_table.truncate()
 
     
 if __name__ == "__main__":
