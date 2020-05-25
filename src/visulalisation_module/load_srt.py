@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from .load_srt_UI import UiLoadSrt
-from configs.config_manip import Config
+from src.config_manip.config_manip import Config
 from os import getcwd
 
 from ..srt_parsing_modules.srt_parser import srt_to_line, line_to_tokens

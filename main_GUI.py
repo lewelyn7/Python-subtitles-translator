@@ -5,7 +5,7 @@ from src.visulalisation_module.export import ExportDialog
 from src.visulalisation_module.most_frequent_list import MostFrequentController
 from src.database_integration_module.db_helpers import DbHelpers
 from PyQt5 import QtWidgets
-from configs.config_manip import Config
+from src.config_manip.config_manip import Config
 import sys
 from os import path
 import logging
@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     dbh.reset_film_stats()
 
-    sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
+    # sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
     app = QtWidgets.QApplication(sys.argv)
 
 

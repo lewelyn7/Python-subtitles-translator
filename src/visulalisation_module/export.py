@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from configs.config_manip import Config
+from src.config_manip.config_manip import Config
 from .export_UI import Ui_export_dialog
 from os import getcwd
 

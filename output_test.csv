@@ -1,6 +1,5 @@
-word;translation
-is;['byc\n']
-subtitle;['(na filmie) podpis, napis\n']
-do;['robic']
-easy;['1. <Adj> łatwy\n', '2. <Adv> łatwo\n', '3. <Adj> swobodny, na luzie\n', '4. idiom: easier said than done = łatwiej powiedzieć niż zrobić\n', '5. (nieform) idiom: take it/things easy = nie przejmować się\n', '6. (nieform) idiom: go easy on sth = dać sobie z czymś spokój\n', '7. <N Comp> (also easy chair [ˌi:zɪ ˈʧeə]) fotel\n']
-to;['1. występuje z bezokolicznikiem, nie tłumaczone (to love = kochać)\n', '2. <Prep> (z I formą czasownika) aby, żeby (he stopped to look at her = stanął, aby na nią spojrzeć)\n', '3. (przed rzeczownikiem) często nie tłumaczone, odpowiada polskiemu celownikowi (he showed the letter to John = pokazał Johnowi list)\n', '4. do\n', '5. (wskazywać) na\n', '6. po  (np. po prawej), z\n', '7. (uldze, wtórowi) ku\n', '8. (korzyści) dla\n', '9. (przy określaniu godziny) za (ten to eight = za dziesięć ósma)\n', '10. idiom: from ... to ... = od ... do ..., z ... do ...\n', '11. idiom: they have been to (Germany) = byli już w Niemczech, byli już w\n', '12. idiom: to and fro = tam i z powrotem, tam i sam\n']
+byc ;is
+(na filmie) podpis, napis ;subtitle
+robic ;do
+1. <Adj> łatwy 2. <Adv> łatwo 3. <Adj> swobodny, na luzie ;easy
+1. występuje z bezokolicznikiem, nie tłumaczone (to love = kochać) 2. <Prep> (z I formą czasownika) aby, żeby (he stopped to look at her = stanął, aby na nią spojrzeć) 3. (przed rzeczownikiem) często nie tłumaczone, odpowiada polskiemu celownikowi (he showed the letter to John = pokazał Johnowi list) ;to
