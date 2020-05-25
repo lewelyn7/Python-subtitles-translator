@@ -16,15 +16,10 @@ class DictionaryParser:
         with open(file_name, 'r') as inF:
 
             for line in inF:
-                # print("line " + line)
-                # if debug_cnt == 50:
-                #     assert False, "koniec"
                 if line == "\n" or line == "\r\n":
                     new_lines_cnt = new_lines_cnt + 1
-                    # print("line  = " + str(new_lines_cnt))
 
                 else:
-                    # print(" nie enter " + str(new_lines_cnt))
                     if dict_started == False and new_lines_cnt == 2:
                         dict_started = True
                         new_lines_cnt = 1

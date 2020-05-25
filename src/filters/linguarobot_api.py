@@ -1,6 +1,7 @@
 import requests
 import json
 from .lemmatization_api_ABC import LemmatizationAPI, LemmaAPIError
+import logging
 
 class LinguaRobotAPI(LemmatizationAPI):
     """Here we have 2,5k/day so a little better, support for lemmatization"""
@@ -11,13 +12,14 @@ class LinguaRobotAPI(LemmatizationAPI):
         'x-rapidapi-host': "lingua-robot.p.rapidapi.com",
         'x-rapidapi-key': "2405fb23c9msh8dd436952fb8d10p1f59d6jsn97a6bf469ce9"
         }
+        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
 
     def fetch(self, word):
         self.word = word
         self.response = requests.request("GET", self.url + word, headers=self.headers)
 
         if self.response.status_code != 200 or len(json.loads(self.response.text)["entries"]) == 0:
-            print("Request returned " + str(self.response.status_code) + " status code")
+            logger.warning("Request returned " + str(self.response.status_code) + " status code")
             raise LemmaAPIError
 
         self.word_info = json.loads(self.response.text)["entries"][0]

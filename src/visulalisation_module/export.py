@@ -8,6 +8,7 @@ from ..csv_manip.csv_exporter import CsvExporter, ExportError
 class ExportDialog(QtWidgets.QDialog):
     def __init__(self, config, word_list, score, max_score):
         super(ExportDialog, self).__init__()
+        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
 
         self.score = score
         self.max_score = max_score
@@ -65,15 +66,13 @@ class ExportDialog(QtWidgets.QDialog):
 
     def export_clicked(self):
         self.translations_max = int(self.ui.translations_num_spin.value())
-        print(self.translations_max)
         csv_exporter = CsvExporter()
         try:
             csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header, self.translations_max)
-            print("exported")
+            logger.info("exported")
             self.ui.export_btn.setText("exported")
-            self.ui.export_btn.setEnabled(False)
         except ExportError:
-            print("not exported - error")
+            logger.warning("couldnt export to file")
         
     def file_extension_changed(self, word):
         self.file_extension = word

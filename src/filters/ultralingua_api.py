@@ -6,12 +6,13 @@ class UltraLinguaAPI():
     def __init__(self):
         """ nice people offered us free trial for academic project"""
         self.key = "UXUJKQWMIKHLIPQVHDICH"
+        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
 
     def fetch(self, word):
         self.word = word
         self.word_info = requests.request("GET", "https://api.ultralingua.com/api/2.0/lemmas/en/" + word + "?key=" + self.key)
         if self.word_info.status_code != 200:
-            print("Request returned " + str(self.word_info.status_code) + " status code")
+            logger.warning("Request returned " + str(self.word_info.status_code) + " status code")
             raise LemmaAPIError
 
         self.word_info = json.loads(self.word_info.text)

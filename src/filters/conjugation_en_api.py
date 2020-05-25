@@ -17,7 +17,6 @@ class ConjugationAPI():
             return False
 
     def is_verb_regular(self, verb, normal_form):
-        # print("normal form " + normal_form)
         if normal_form + 'ed' == verb:
             return True
         elif normal_form + 'd' == verb:

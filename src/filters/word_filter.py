@@ -14,6 +14,7 @@ class WordFilter:
         """ returns form of a word that should be put in the database,
             so it's either basic form of a word or conjungated form in case of
             irregular conjungation """
+            
         word = word.lower()
         try:
             self.engine.fetch(word)
