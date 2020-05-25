@@ -74,7 +74,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
             else:
                 token = token.lower()
                 if dbh.is_word_known(token):
-                    basic_form= dbh.get_basic_form(token)
+                    basic_form = dbh.get_basic_form(token)
                     print(" slowo jest znane")
                     dbh.increment_frequency(basic_form)
                 else:
@@ -100,6 +100,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
                             if translations:
                                 dbh.insert_basic_form(filtered_word, 5.0, translations)
                                 dbh.insert_known_word(token, filtered_word)
+                                dbh.insert_known_word(filtered_word, filtered_word)
             last_token = token
         lines_processed += 1
         if progress_bar_setter:
