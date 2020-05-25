@@ -3,11 +3,11 @@ from .load_srt_UI import UiLoadSrt
 from configs.config_manip import Config
 from os import getcwd
 
-from srt_parsing_modules.srt_parser import srt_to_line, line_to_tokens
-from filters.word_filter import WordFilter, LemmaAPIError
-from dictionaries.dict_api import DictAPI
-from database_integration_module.db_helpers import DbHelpers
-from srt_parsing_modules.srt_parser import process_srt_file
+from ..srt_parsing_modules.srt_parser import srt_to_line, line_to_tokens
+from ..filters.word_filter import WordFilter, LemmaAPIError
+from ..dictionaries.dict_api import DictAPI
+from ..database_integration_module.db_helpers import DbHelpers
+from ..srt_parsing_modules.srt_parser import process_srt_file
 
 class LoadSrtDialog(QtWidgets.QDialog):
     def __init__(self, config):

@@ -1,6 +1,6 @@
-from dictionaries.dict_api import DictAPI
-from database_integration_module.db_helpers import DbHelpers
-from filters.word_filter import WordFilter, LemmaAPIError
+from ..dictionaries.dict_api import DictAPI
+from ..database_integration_module.db_helpers import DbHelpers
+from ..filters.word_filter import WordFilter, LemmaAPIError
 
 def clean_line(line):
     cleaned_line=""
@@ -38,7 +38,7 @@ def line_to_tokens(line):
             yield token
 
 def process_srt_file(filename, config, progress_bar_setter=None):
-    dictapi = DictAPI("dictionaries/eng_pol_dict.json")
+    dictapi = DictAPI("src/dictionaries/eng_pol_dict.json")
     flAPI = WordFilter()
 
     no_translations = []

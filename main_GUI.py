@@ -1,13 +1,14 @@
-from visulalisation_module.load_srt import LoadSrtDialog
-from visulalisation_module.export import ExportDialog
-from visulalisation_module.no_translation_list import NoTranslationController
-from visulalisation_module.export import ExportDialog
-from visulalisation_module.most_frequent_list import MostFrequentController
-from database_integration_module.db_helpers import DbHelpers
+from src.visulalisation_module.load_srt import LoadSrtDialog
+from src.visulalisation_module.export import ExportDialog
+from src.visulalisation_module.no_translation_list import NoTranslationController
+from src.visulalisation_module.export import ExportDialog
+from src.visulalisation_module.most_frequent_list import MostFrequentController
+from src.database_integration_module.db_helpers import DbHelpers
 from PyQt5 import QtWidgets
 from configs.config_manip import Config
 import sys
 from os import path
+import logging
 
 if __name__ == "__main__":
     # import sys
@@ -17,7 +18,7 @@ if __name__ == "__main__":
     # ui.setupUi(load_srt)
     # load_srt.show()
     # sys.exit(app.exec_())
-    config = Config("config.yaml")
+    config = Config("configs/config.yaml")
     config.read()
     dbh = DbHelpers(config.get()["database_filename"])
 

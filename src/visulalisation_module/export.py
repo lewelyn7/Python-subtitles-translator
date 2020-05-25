@@ -3,7 +3,7 @@ from configs.config_manip import Config
 from .export_UI import Ui_export_dialog
 from os import getcwd
 
-from csv_manip.csv_exporter import CsvExporter, ExportError
+from ..csv_manip.csv_exporter import CsvExporter, ExportError
 
 class ExportDialog(QtWidgets.QDialog):
     def __init__(self, config, word_list, score, max_score):
