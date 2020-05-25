@@ -23,11 +23,17 @@ if __name__ == "__main__":
     dbh = DbHelpers(config.get()["database_filename"])
     dbh.reset_film_stats()
 
-    logger = logging.getLogger('main_logger')
+
+    #logging module
+    logger = logging.getLogger("main_logger")
+    logger.setLevel(logging.INFO)
     err_stream_handler = logging.StreamHandler()
     err_stream_handler.setLevel(logging.WARNING)
     log_file_handler = logging.FileHandler(config.get()["logs_filename"])
     log_file_handler.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - %(name)s:%(levelname)s: %(message)s')
+    err_stream_handler.setFormatter(formatter)
+    log_file_handler.setFormatter(formatter)
     logger.addHandler(log_file_handler)
     logger.addHandler(err_stream_handler)
 

@@ -40,9 +40,8 @@ def line_to_tokens(line):
 def process_srt_file(filename, config, progress_bar_setter=None):
     dictapi = DictAPI("src/dictionaries/eng_pol_dict.json")
     flAPI = WordFilter()
-
+    logger = logging.getLogger("main_logger.srt_parser")
     no_translations = []
-
     dbh = DbHelpers(config.get()["database_filename"])
 
     interpunction = "!@#$%^&*()_-=+`~[]\\{}|:\";''<>?,./"
@@ -50,7 +49,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
     try:
         fil = open(filename)
     except IOError:
-        logging.error("file cant be loaded")
+        logger.error("file cant be loaded")
         return False
     lines_num = 0
     for line in fil: lines_num += 1
@@ -61,20 +60,18 @@ def process_srt_file(filename, config, progress_bar_setter=None):
     for line in lines:
         for token in line_to_tokens(line):
             if token in interpunction:
-                logging.info("%s - interpunction", token)
+                logger.info("%s - interpunction", token)
             elif last_token != "." and token[0].isupper():
-                logging.info("%s - proper name", token)
-                pass # it means that token is nazwa wlasna
+                logger.info("%s - proper name", token)
             elif token.isupper():
-                logging.info("%s - strange uppercase word", token)
-                pass # it means that token is strange uppercase word
+                logger.info("%s - strange uppercase word", token)
             elif dbh.in_blacklist(token.lower()):
-                logging.info("%s - in black list", token)
+                logger.info("%s - in black list", token)
             else:
                 token = token.lower()
                 if dbh.is_word_known(token):
                     basic_form = dbh.get_basic_form(token)
-                    logging.info("%s - word is known", token)
+                    logger.info("%s - word is known", token)
 
                     dbh.increment_frequency(basic_form)
                 else:
@@ -82,14 +79,14 @@ def process_srt_file(filename, config, progress_bar_setter=None):
                         filtered_word = flAPI.filter(token)
                         basic_form = flAPI.get_basic_form()
                     except LemmaAPIError:
-                        logging.error("%s - LemaAPIError", token)
+                        logger.error("%s - LemaAPIError", token)
                         no_translations.append([token])
                     else:
                         if dbh.is_word_known(filtered_word):
-                            logging.info("%s - filtered form of that word is known", token)
+                            logger.info("%s - filtered form of that word is known", token)
                             dbh.insert_known_word(token, filtered_word)
                         else:
-                            logging.info("%s - word is not known")
+                            logger.info("%s - word is not known")
                             translations = dictapi.get_translation(filtered_word)
                             if translations == []:
                                 translations = dictapi.get_translation(basic_form)

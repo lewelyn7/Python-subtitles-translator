@@ -1,0 +1,51 @@
+gigigg
+gigigg
+ffff
+2020-05-25 15:38:43,820 - main_logger - WARNING - ffff
+2020-05-25 15:39:09,849 - main_logger - WARNING - ffff
+2020-05-25 15:41:00,074 - main_logger - WARNING - ffff
+2020-05-25 15:41:03,642 - main_logger.srt_parser - WARNING - o tako testuje
+2020-05-25 15:41:49,658 - main_logger - WARNING - ffff
+2020-05-25 15:41:53,897 - main_logger.srt_parser - WARNING - o tako testuje
+2020-05-25 15:45:05,627 - main_logger - WARNING - ffff
+2020-05-25 15:45:13,999 - main_logger - ERROR - infogigigg
+2020-05-25 15:45:14,000 - main_logger - WARNING - ffff
+2020-05-25 15:45:33,934 - main_logger - ERROR - infogigigg
+2020-05-25 15:45:33,934 - main_logger - WARNING - ffff
+2020-05-25 15:47:03,133 - main_logger - ERROR - infogigigg
+2020-05-25 15:47:03,133 - main_logger - WARNING - ffff
+2020-05-25 15:48:28,364 - main_logger - INFO - infogigigg
+2020-05-25 15:48:28,364 - main_logger - WARNING - ffff
+2020-05-25 15:48:33,741 - main_logger.srt_parser - WARNING - o tako testuje
+2020-05-25 15:48:33,744 - main_logger.srt_parser - INFO - English - proper name
+2020-05-25 15:48:33,745 - main_logger.srt_parser - INFO - US - proper name
+2020-05-25 15:48:33,748 - main_logger.srt_parser - INFO - This - proper name
+2020-05-25 15:48:33,759 - main_logger.srt_parser - INFO - is - word is known
+2020-05-25 15:48:33,786 - main_logger.srt_parser - INFO - a - word is known
+2020-05-25 15:48:33,801 - main_logger.srt_parser - INFO - subtitle - word is known
+2020-05-25 15:48:33,817 - main_logger.srt_parser - INFO - in - word is known
+2020-05-25 15:48:33,829 - main_logger.srt_parser - INFO - American - proper name
+2020-05-25 15:48:33,830 - main_logger.srt_parser - INFO - English - proper name
+2020-05-25 15:48:33,832 - main_logger.srt_parser - INFO - Adding - proper name
+2020-05-25 15:48:33,835 - main_logger.srt_parser - INFO - subtitles - word is known
+2020-05-25 15:48:33,843 - main_logger.srt_parser - INFO - is - word is known
+2020-05-25 15:48:33,851 - main_logger.srt_parser - INFO - very - word is known
+2020-05-25 15:48:33,864 - main_logger.srt_parser - INFO - easy - word is known
+2020-05-25 15:48:33,878 - main_logger.srt_parser - INFO - to - word is known
+2020-05-25 15:48:33,892 - main_logger.srt_parser - INFO - do - word is known
+main_logger.srt_parser:INFO: English - proper name
+main_logger.srt_parser:INFO: US - proper name
+main_logger.srt_parser:INFO: This - proper name
+main_logger.srt_parser:INFO: is - word is known
+main_logger.srt_parser:INFO: a - word is known
+main_logger.srt_parser:INFO: subtitle - word is known
+main_logger.srt_parser:INFO: in - word is known
+main_logger.srt_parser:INFO: American - proper name
+main_logger.srt_parser:INFO: English - proper name
+main_logger.srt_parser:INFO: Adding - proper name
+main_logger.srt_parser:INFO: subtitles - word is known
+main_logger.srt_parser:INFO: is - word is known
+main_logger.srt_parser:INFO: very - word is known
+main_logger.srt_parser:INFO: easy - word is known
+main_logger.srt_parser:INFO: to - word is known
+main_logger.srt_parser:INFO: do - word is known
