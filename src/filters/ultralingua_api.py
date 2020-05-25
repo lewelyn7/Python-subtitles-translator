@@ -1,12 +1,13 @@
 import requests
 import json
 from .lemmatization_api_ABC import LemmatizationAPI, LemmaAPIError
+import logging
 
 class UltraLinguaAPI():
     def __init__(self):
         """ nice people offered us free trial for academic project"""
         self.key = "UXUJKQWMIKHLIPQVHDICH"
-        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
+        self.logger = logging.getLogger("main_logger." + self.__class__.__name__)
 
     def fetch(self, word):
         self.word = word

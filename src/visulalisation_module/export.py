@@ -2,13 +2,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from src.config_manip.config_manip import Config
 from .export_UI import Ui_export_dialog
 from os import getcwd
-
+import logging
 from ..csv_manip.csv_exporter import CsvExporter, ExportError
 
 class ExportDialog(QtWidgets.QDialog):
     def __init__(self, config, word_list, score, max_score):
         super(ExportDialog, self).__init__()
-        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
+        self.logger = logging.getLogger("main_logger." + self.__class__.__name__)
 
         self.score = score
         self.max_score = max_score

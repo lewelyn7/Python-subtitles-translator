@@ -11,15 +11,12 @@ from os import path
 import logging
 
 if __name__ == "__main__":
-    # import sys
-    # app = QtWidgets.QApplication(sys.argv)
-    # load_srt = QtWidgets.QDialog()
-    # ui = Ui_load_srt()
-    # ui.setupUi(load_srt)
-    # load_srt.show()
-    # sys.exit(app.exec_())
+
+    #config
     config = Config("configs/config.yaml")
     config.read()
+    
+    #database
     dbh = DbHelpers(config.get()["database_filename"])
     dbh.reset_film_stats()
 
@@ -37,15 +34,11 @@ if __name__ == "__main__":
     logger.addHandler(log_file_handler)
     logger.addHandler(err_stream_handler)
 
-    # sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
+
+    #GUI
     app = QtWidgets.QApplication(sys.argv)
-
-
-
     load_srt = LoadSrtDialog(config)
     app.exec_()
-
-
 
     if load_srt.no_translations_words:
         no_translations = NoTranslationController(load_srt.no_translations_words)

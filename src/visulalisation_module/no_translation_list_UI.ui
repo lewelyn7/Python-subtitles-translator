@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>475</width>
+    <width>497</width>
     <height>300</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,3,1">
+          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,1">
            <property name="spacing">
             <number>14</number>
            </property>

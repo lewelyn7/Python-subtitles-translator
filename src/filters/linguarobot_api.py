@@ -12,7 +12,7 @@ class LinguaRobotAPI(LemmatizationAPI):
         'x-rapidapi-host': "lingua-robot.p.rapidapi.com",
         'x-rapidapi-key': "2405fb23c9msh8dd436952fb8d10p1f59d6jsn97a6bf469ce9"
         }
-        self.logger = logging.getLogger("main_logger." + self.__class_.__name__)
+        self.logger = logging.getLogger("main_logger." + self.__class__.__name__)
 
     def fetch(self, word):
         self.word = word

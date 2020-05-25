@@ -86,7 +86,7 @@ def process_srt_file(filename, config, progress_bar_setter=None):
                             logger.info("%s - filtered form of that word is known", token)
                             dbh.insert_known_word(token, filtered_word)
                         else:
-                            logger.info("%s - word is not known")
+                            logger.info("%s - word is not known", token)
                             translations = dictapi.get_translation(filtered_word)
                             if translations == []:
                                 translations = dictapi.get_translation(basic_form)
