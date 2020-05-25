@@ -60,7 +60,7 @@ class MostFrequentController(QtWidgets.QDialog):
         return self.wordList
 
     def makeReadable(self, words):
-        pass
+        return words
 
     def getScore(self):
         output = 0
@@ -71,7 +71,7 @@ class MostFrequentController(QtWidgets.QDialog):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    load_srt = MostFrequentController([['apple', 'japko', 0], ['pear', 'gruszka', 0]])
+    load_srt = MostFrequentController([["its", "jego, jej, ich, sw\u00f3j  (zaimek u\u017cywany zamiast rzeczownik\u00f3w nie odnosz\u0105cych si\u0119 do ludzi)\n", 0], ["been", "idiom: he has been to (Paris) = on by\u0142 w Pary\u017cu, on by\u0142 w\n", 0]])
     app.exec_()
     list1 = load_srt.getList()
     print(list1)
