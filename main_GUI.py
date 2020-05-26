@@ -63,9 +63,16 @@ if __name__ == "__main__":
         app.exec_()
 
     score = most_frequent.getScore()
+    known_words = most_frequent.get_known_words()
     logger.info("most frequent score: %d", score)
 
-    to_be_exported = dbh.get_words_from_stats()
+    from_stats = dbh.get_words_from_stats()
+    to_be_exported = []
+    for word in from_stats:
+        if word['word'] not in known_words:
+            to_be_exported.append(word)
+
+
     logger.info("number of words to be exported: %d", len(to_be_exported))
     export_dialog = ExportDialog(config, to_be_exported, score, len(most_frequent_words))
     app.exec_()

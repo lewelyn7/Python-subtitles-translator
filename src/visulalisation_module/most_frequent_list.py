@@ -78,6 +78,13 @@ class MostFrequentController(QtWidgets.QDialog):
         for word in self.wordList:
             output+=word[2]
         return output
+
+    def get_known_words(self):
+        known_words = []
+        for word in self.wordList:
+            if word[2] == 1:
+                known_words.append(word[0])
+        return known_words
     
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-database_filename: 'db/db_test72.json'
+database_filename: 'db/db_test74.json'
 word_lemmatization_API: WiktionaryAPI
 word_scoring_API: Offline Database
 word_translation_API: TwinWordAPI
