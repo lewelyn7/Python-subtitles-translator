@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'most_frequent_list_UI2.ui'
+# Form implementation generated from reading ui file 'most_frequent_list_UI.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -39,19 +39,10 @@ class Ui_mostFrequentList(object):
         self.go_left_button_2.setFont(font)
         self.go_left_button_2.setObjectName("go_left_button_2")
         self.horizontalLayout_3.addWidget(self.go_left_button_2)
-        self.word_label_2 = QtWidgets.QLabel(mostFrequentList)
+        self.word_label_2 = QtWidgets.QTextBrowser(mostFrequentList)
         font = QtGui.QFont()
-        font.setFamily("MS Shell Dlg 2")
-        font.setPointSize(20)
-        font.setBold(False)
-        font.setWeight(50)
-        font.setStyleStrategy(QtGui.QFont.PreferAntialias)
+        font.setPointSize(24)
         self.word_label_2.setFont(font)
-        self.word_label_2.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.word_label_2.setTextFormat(QtCore.Qt.AutoText)
-        self.word_label_2.setScaledContents(True)
-        self.word_label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.word_label_2.setIndent(1)
         self.word_label_2.setObjectName("word_label_2")
         self.horizontalLayout_3.addWidget(self.word_label_2)
         self.go_right_button_2 = QtWidgets.QPushButton(mostFrequentList)
@@ -70,7 +61,7 @@ class Ui_mostFrequentList(object):
         self.go_right_button_2.setObjectName("go_right_button_2")
         self.horizontalLayout_3.addWidget(self.go_right_button_2)
         self.horizontalLayout_3.setStretch(0, 1)
-        self.horizontalLayout_3.setStretch(1, 3)
+        self.horizontalLayout_3.setStretch(1, 4)
         self.horizontalLayout_3.setStretch(2, 1)
         self.verticalLayout_6.addLayout(self.horizontalLayout_3)
         self.verticalLayout_5.addLayout(self.verticalLayout_6)
@@ -141,14 +132,13 @@ class Ui_mostFrequentList(object):
         mostFrequentList.setWindowTitle(_translate("mostFrequentList", "Dialog"))
         self.go_left_button_2.setText(_translate("mostFrequentList", "<"))
         self.go_left_button_2.setShortcut(_translate("mostFrequentList", "Left"))
-        self.word_label_2.setText(_translate("mostFrequentList", "<><><>drutkolczastyxd"))
         self.go_right_button_2.setText(_translate("mostFrequentList", ">"))
         self.go_right_button_2.setShortcut(_translate("mostFrequentList", "Right"))
-        self.known_button_2.setText(_translate("mostFrequentList", "Known"))
+        self.known_button_2.setText(_translate("mostFrequentList", "Znam"))
         self.known_button_2.setShortcut(_translate("mostFrequentList", "Z"))
-        self.not_known_button_2.setText(_translate("mostFrequentList", "Not known"))
+        self.not_known_button_2.setText(_translate("mostFrequentList", "Nie Znam"))
         self.not_known_button_2.setShortcut(_translate("mostFrequentList", "X"))
-        self.pushButton_2.setText(_translate("mostFrequentList", "Translate"))
+        self.pushButton_2.setText(_translate("mostFrequentList", "Tłumacz"))
         self.pushButton_2.setShortcut(_translate("mostFrequentList", "Space"))
-        self.save_button_2.setToolTip(_translate("mostFrequentList", "Save all changes and proceed to the next step."))
-        self.save_button_2.setText(_translate("mostFrequentList", "Save all"))
+        self.save_button_2.setToolTip(_translate("mostFrequentList", "Zapisz wszystkie zmiany i przejdź do następniego kroku."))
+        self.save_button_2.setText(_translate("mostFrequentList", "Zapisz wszystkie"))
