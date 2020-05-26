@@ -5,12 +5,26 @@ class ExportError( Exception):
     pass
 
 class CsvExporter:
+    """Exporter of words to csv file."""
     def __init__(self):
         pass
 
     def export(self, word_list, filename, col_order, col_sep, rec_sep, include_header, translations_max):
-        """ word_list should be passed as list of dictionaries  TODO correct order"""
-        
+        """
+        Exports word_list dictionary to a csv file.
+
+        Parameteres:
+            word_list(dict): dictionary with words
+            filename(str): filename
+            col_ortder(str): string indicating column order in exported file e.g. 'translation first'
+            col_sep(char): column separator in the exported csv file
+            include_header(boolean): obvious
+            translation_max(int): maximum number of translations to be exported
+
+        Raises:
+            ExportError: in case of any failure
+        """
+
         outfile = open(filename, "w", newline=rec_sep)
         csvwriter = writer(outfile, delimiter=col_sep)
 

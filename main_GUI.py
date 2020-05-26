@@ -52,8 +52,7 @@ if __name__ == "__main__":
         for item in translated_words:
             dbh.insert_basic_form(item[0], 5.0, item[1:])
             dbh.insert_known_word(item[0], item[0])
-    else:
-        sys.exit()
+
     treshold = min(dbh.get_biggest_frequency()*0.7, 10)
 
     most_frequent_words = dbh.get_most_frequent_words(treshold)

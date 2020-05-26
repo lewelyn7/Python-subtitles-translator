@@ -6,12 +6,21 @@ class ImportError(Exception):
 
 
 class csv_importer:
-    """Importer for using with Anki or Quizlet, file should be in csv format with comma as a delitmer
-    and new line to indicate new row ( new word )"""
+    """
+    Importer for using with Anki or Quizlet, file should be in csv format with comma as a delitmer
+    and new line to indicate new row ( new word ).
+    """
 
     def __init__(self, filename, header=False, firstcol="mylang"):
-        """ Constructor accepts csv filename and optional header argument and order of words in csv fie.
-         If translations are placed in first column, then firstcol should be set to "translations" """
+        """
+        Constructor accepts csv filename and optional header argument and order of words in csv fie.
+        If translations are placed in first column, then firstcol should be set to "translations" 
+        
+        Parameters:
+            filename(str): path to imported file
+            header(boolean): does file include header?
+            firstcol(str): e.g 'mylang' if first column is with translations
+        """
          
         try:
             assert re.match(".*\.csv$", filename), "file has wrong extension"
@@ -22,7 +31,15 @@ class csv_importer:
             print("assert error", inst.args)
 
     def read(self):
-        """ returns an iterator over tuple of words (word, translation) in csvfile"""
+        """
+        Reads from file with parameters gicen in constructor.
+
+        Returns:
+            Generator over tuple (translation, word)
+
+        Raises:
+            ImportError: in case of IOError e.g.
+        """
 
         try:
             csvfile = open(self.filename)

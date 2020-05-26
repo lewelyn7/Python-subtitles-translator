@@ -1,11 +1,13 @@
 from tinydb import TinyDB, Query
 
 class DictionaryParser:
-    """ TODO  """
+    """Class for parsing dict files and create TinyDB json file."""
     def __init__(self, database_file):
+        """Takes patho to database file which has to be created."""
         self.db = TinyDB(database_file)
 
     def parse_dict_file(self, file_name):
+        """Takes path to dict file and inserts records to DB."""
         word = {}
         word["word"] = ""
         word["translations"] = []

@@ -38,6 +38,18 @@ def line_to_tokens(line):
             yield token
 
 def process_srt_file(filename, config, progress_bar_setter=None):
+    """
+    Proccess srt file and puts appropiate info in database
+
+    Parameters:
+        filename(str): path to srt file
+        config(Config): instance of config file
+        progress_bar_setter: callback func to update GUI progress bar
+
+    Returns:
+        no_translations(list): list of words for which there isn't translation or LemaAPIError was raised
+    """
+    
     dictapi = DictAPI("src/dictionaries/eng_pol_dict.json")
     flAPI = WordFilter()
     logger = logging.getLogger("main_logger.srt_parser")

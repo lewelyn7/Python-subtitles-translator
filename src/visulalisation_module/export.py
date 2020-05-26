@@ -69,10 +69,10 @@ class ExportDialog(QtWidgets.QDialog):
         csv_exporter = CsvExporter()
         try:
             csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header, self.translations_max)
-            logger.info("exported")
+            self.logger.info("exported")
             self.ui.export_btn.setText("exported")
         except ExportError:
-            logger.warning("couldnt export to file")
+            self.logger.warning("couldnt export to file")
         
     def file_extension_changed(self, word):
         self.file_extension = word

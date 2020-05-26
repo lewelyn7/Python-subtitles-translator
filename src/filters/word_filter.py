@@ -11,9 +11,14 @@ class WordFilter:
         self.conEngine = ConjugationAPI()
 
     def filter(self, word):
-        """ returns form of a word that should be put in the database,
-            so it's either basic form of a word or conjungated form in case of
-            irregular conjungation """
+        """
+        Returns form of a word that should be put in the database,
+        so it's either basic form of a word or conjungated form in case of
+        irregular conjungation.
+
+        Raises:
+            LemaAPIError: raised in case of lemmatization api error e.g. connection problem
+        """
             
         word = word.lower()
         try:
@@ -45,5 +50,6 @@ class WordFilter:
         return self.basic_form
 
     def get_basic_form(self):
+        """Returns basic form of word fetched by a filter method. So filter method should be called firs."""
         return self.basic_form
 

@@ -13,7 +13,7 @@ class UltraLinguaAPI():
         self.word = word
         self.word_info = requests.request("GET", "https://api.ultralingua.com/api/2.0/lemmas/en/" + word + "?key=" + self.key)
         if self.word_info.status_code != 200:
-            logger.warning("Request returned " + str(self.word_info.status_code) + " status code")
+            self.logger.warning("Request returned " + str(self.word_info.status_code) + " status code")
             raise LemmaAPIError
 
         self.word_info = json.loads(self.word_info.text)

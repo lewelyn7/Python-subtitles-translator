@@ -875,3 +875,845 @@ main_logger.srt_parser:INFO: do - word is known
 2020-05-25 16:26:00,646 - main_logger.srt_parser:INFO: company - word is known
 2020-05-25 16:26:00,666 - main_logger.srt_parser:INFO: ink - word is known
 2020-05-25 16:26:00,679 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:05,693 - main_logger.srt_parser:INFO: ﻿ - word is not known
+2020-05-25 16:50:05,767 - main_logger.srt_parser:INFO: This - proper name
+2020-05-25 16:50:06,612 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 16:50:07,525 - main_logger.srt_parser:INFO: unbelievable - word is not known
+2020-05-25 16:50:07,619 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:08,858 - main_logger.srt_parser:INFO: its - word is not known
+2020-05-25 16:50:09,777 - main_logger.srt_parser:INFO: been - word is not known
+2020-05-25 16:50:10,812 - main_logger.srt_parser:INFO: half - word is not known
+2020-05-25 16:50:12,178 - main_logger.srt_parser:INFO: an - word is not known
+2020-05-25 16:50:13,266 - main_logger.srt_parser:INFO: hour - word is not known
+2020-05-25 16:50:13,352 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:14,191 - main_logger.srt_parser:INFO: if - word is not known
+2020-05-25 16:50:15,163 - main_logger.srt_parser:INFO: this - word is not known
+2020-05-25 16:50:16,345 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 16:50:17,622 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 16:50:18,595 - main_logger.srt_parser:INFO: cartoon - word is not known
+2020-05-25 16:50:19,514 - main_logger.srt_parser:INFO: youd - word is not known
+2020-05-25 16:50:20,448 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:50:21,807 - main_logger.srt_parser:INFO: looking - word is not known
+2020-05-25 16:50:23,139 - main_logger.srt_parser:INFO: like - word is not known
+2020-05-25 16:50:24,125 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 16:50:24,936 - main_logger.srt_parser:INFO: ham - word is not known
+2020-05-25 16:50:25,983 - main_logger.srt_parser:INFO: right - word is not known
+2020-05-25 16:50:27,033 - main_logger.srt_parser:INFO: about - word is not known
+2020-05-25 16:50:28,216 - main_logger.srt_parser:INFO: now - word is not known
+2020-05-25 16:50:28,301 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:29,147 - main_logger.srt_parser:INFO: theres - word is not known
+2020-05-25 16:50:30,268 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:50:31,393 - main_logger.srt_parser:INFO: waitress - word is not known
+2020-05-25 16:50:31,487 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:32,607 - main_logger.srt_parser:INFO: excuse - word is not known
+2020-05-25 16:50:33,867 - main_logger.srt_parser:INFO: me - word is not known
+2020-05-25 16:50:34,914 - main_logger.srt_parser:INFO: miss - word is not known
+2020-05-25 16:50:35,015 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:35,015 - main_logger.srt_parser:INFO: JOEY - strange uppercase word
+2020-05-25 16:50:35,015 - main_logger.srt_parser:INFO: Hello - proper name
+2020-05-25 16:50:35,016 - main_logger.srt_parser:INFO: miss - word is known
+2020-05-25 16:50:35,028 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:50:35,028 - main_logger.srt_parser:INFO: Its - proper name
+2020-05-25 16:50:35,028 - main_logger.srt_parser:INFO: Phoebe - proper name
+2020-05-25 16:50:35,028 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:35,029 - main_logger.srt_parser:INFO: CHANDLER - strange uppercase word
+2020-05-25 16:50:35,029 - main_logger.srt_parser:INFO: Hi - proper name
+2020-05-25 16:50:35,029 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:35,993 - main_logger.srt_parser:INFO: hi - word is not known
+2020-05-25 16:50:36,089 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:37,030 - main_logger.srt_parser:INFO: okay - word is not known
+2020-05-25 16:50:38,515 - main_logger.srt_parser:INFO: will - word is not known
+2020-05-25 16:50:39,570 - main_logger.srt_parser:INFO: that - word is not known
+2020-05-25 16:50:40,713 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:50:42,128 - main_logger.srt_parser:INFO: all - word is not known
+2020-05-25 16:50:42,219 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:50:42,219 - main_logger.srt_parser:INFO: Wait - proper name
+2020-05-25 16:50:43,223 - main_logger.srt_parser:INFO: wait - word is not known
+2020-05-25 16:50:43,316 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:44,605 - main_logger.srt_parser:INFO: what - word is not known
+2020-05-25 16:50:45,773 - main_logger.srt_parser:INFO: are - word is not known
+2020-05-25 16:50:46,887 - main_logger.srt_parser:INFO: you - word is not known
+2020-05-25 16:50:48,174 - main_logger.srt_parser:INFO: doing - word is not known
+2020-05-25 16:50:49,426 - main_logger.srt_parser:INFO: here - word is not known
+2020-05-25 16:50:49,534 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:50:49,535 - main_logger.srt_parser:INFO: Yeah - proper name
+2020-05-25 16:50:50,916 - main_logger.srt_parser:INFO: um - word is not known
+2020-05-25 16:50:50,985 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:50:52,042 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 16:50:53,115 - main_logger.srt_parser:INFO: over - word is not known
+2020-05-25 16:50:54,641 - main_logger.srt_parser:INFO: there - word is not known
+2020-05-25 16:50:54,701 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:54,701 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:54,701 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:54,702 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:54,702 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:55,661 - main_logger.srt_parser:INFO: .then - word is not known
+2020-05-25 16:50:55,741 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:50:57,239 - main_logger.srt_parser:INFO: said - word is not known
+2020-05-25 16:50:57,304 - main_logger.srt_parser:INFO: Excuse - proper name
+2020-05-25 16:50:57,305 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 16:50:57,312 - main_logger.srt_parser:INFO: miss - word is known
+2020-05-25 16:50:57,315 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:50:58,637 - main_logger.srt_parser:INFO: so - word is not known
+2020-05-25 16:51:00,078 - main_logger.srt_parser:INFO: now - word is not known
+2020-05-25 16:51:00,172 - main_logger.srt_parser:INFO: Im - proper name
+2020-05-25 16:51:00,173 - main_logger.srt_parser:INFO: here - word is known
+2020-05-25 16:51:00,181 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:01,192 - main_logger.srt_parser:INFO: no - word is not known
+2020-05-25 16:51:01,276 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:51:01,289 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:02,336 - main_logger.srt_parser:INFO: how - word is not known
+2020-05-25 16:51:03,756 - main_logger.srt_parser:INFO: come - word is not known
+2020-05-25 16:51:04,980 - main_logger.srt_parser:INFO: youre - word is not known
+2020-05-25 16:51:06,662 - main_logger.srt_parser:INFO: working - word is not known
+2020-05-25 16:51:06,745 - main_logger.srt_parser:INFO: here - word is known
+2020-05-25 16:51:06,749 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:51:06,749 - main_logger.srt_parser:INFO: Right - proper name
+2020-05-25 16:51:06,750 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:09,338 - main_logger.srt_parser:INFO: because - word is not known
+2020-05-25 16:51:09,419 - main_logger.srt_parser:INFO: its - word is known
+2020-05-25 16:51:11,143 - main_logger.srt_parser:INFO: close - word is not known
+2020-05-25 16:51:12,238 - main_logger.srt_parser:INFO: to - word is not known
+2020-05-25 16:51:13,375 - main_logger.srt_parser:INFO: where - word is not known
+2020-05-25 16:51:13,436 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:51:14,711 - main_logger.srt_parser:INFO: live - word is not known
+2020-05-25 16:51:15,834 - main_logger.srt_parser:INFO: and - word is not known
+2020-05-25 16:51:16,841 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:51:17,768 - main_logger.srt_parser:INFO: aprons - word is not known
+2020-05-25 16:51:18,859 - main_logger.srt_parser:INFO: are - word is not known
+2020-05-25 16:51:19,830 - main_logger.srt_parser:INFO: really - word is not known
+2020-05-25 16:51:20,855 - main_logger.srt_parser:INFO: cute - word is not known
+2020-05-25 16:51:20,938 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:22,280 - main_logger.srt_parser:INFO: can - word is not known
+2020-05-25 16:51:23,307 - main_logger.srt_parser:INFO: we - word is not known
+2020-05-25 16:51:24,234 - main_logger.srt_parser:INFO: start - word is not known
+2020-05-25 16:51:24,334 - main_logger.srt_parser:INFO: over - word is known
+2020-05-25 16:51:24,337 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:51:24,338 - main_logger.srt_parser:INFO: Yeah - proper name
+2020-05-25 16:51:24,338 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:24,340 - main_logger.srt_parser:INFO: okay - word is known
+2020-05-25 16:51:25,358 - main_logger.srt_parser:INFO: great - word is not known
+2020-05-25 16:51:25,431 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:26,485 - main_logger.srt_parser:INFO: ill - word is not known
+2020-05-25 16:51:27,511 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:51:27,587 - main_logger.srt_parser:INFO: over - word is known
+2020-05-25 16:51:27,596 - main_logger.srt_parser:INFO: here - word is known
+2020-05-25 16:51:27,599 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:27,601 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:51:27,606 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:51:27,611 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:51:27,616 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:51:27,620 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:27,621 - main_logger.srt_parser:INFO: I - strange uppercase word
+2020-05-25 16:51:28,532 - main_logger.srt_parser:INFO: dont - word is not known
+2020-05-25 16:51:29,602 - main_logger.srt_parser:INFO: know - word is not known
+2020-05-25 16:51:30,734 - main_logger.srt_parser:INFO: whether - word is not known
+2020-05-25 16:51:32,120 - main_logger.srt_parser:INFO: hes - word is not known
+2020-05-25 16:51:33,022 - main_logger.srt_parser:INFO: testing - word is not known
+2020-05-25 16:51:33,113 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 16:51:34,375 - main_logger.srt_parser:INFO: or - word is not known
+2020-05-25 16:51:35,391 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 16:51:36,405 - main_logger.srt_parser:INFO: acting - word is not known
+2020-05-25 16:51:37,417 - main_logger.srt_parser:INFO: out - word is not known
+2020-05-25 16:51:37,500 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:37,500 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:37,500 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:37,501 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:37,502 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:38,347 - main_logger.srt_parser:INFO: .but - word is not known
+2020-05-25 16:51:39,387 - main_logger.srt_parser:INFO: my - word is not known
+2020-05-25 16:51:40,420 - main_logger.srt_parser:INFO: monkey - word is not known
+2020-05-25 16:51:41,641 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 16:51:42,629 - main_logger.srt_parser:INFO: out - word is not known
+2020-05-25 16:51:43,536 - main_logger.srt_parser:INFO: of - word is not known
+2020-05-25 16:51:44,663 - main_logger.srt_parser:INFO: control - word is not known
+2020-05-25 16:51:44,740 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:45,618 - main_logger.srt_parser:INFO: he - word is not known
+2020-05-25 16:51:46,659 - main_logger.srt_parser:INFO: keeps - word is not known
+2020-05-25 16:51:47,577 - main_logger.srt_parser:INFO: erasing - word is not known
+2020-05-25 16:51:48,501 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:51:49,615 - main_logger.srt_parser:INFO: messages - word is not known
+2020-05-25 16:51:50,655 - main_logger.srt_parser:INFO: on - word is not known
+2020-05-25 16:51:50,727 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 16:51:52,273 - main_logger.srt_parser:INFO: machine - word is not known
+2020-05-25 16:51:52,381 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:53,313 - main_logger.srt_parser:INFO: supposedly - word is not known
+2020-05-25 16:51:54,349 - main_logger.srt_parser:INFO: by - word is not known
+2020-05-25 16:51:55,363 - main_logger.srt_parser:INFO: accident - word is not known
+2020-05-25 16:51:55,453 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:56,386 - main_logger.srt_parser:INFO: oh - word is not known
+2020-05-25 16:51:57,651 - main_logger.srt_parser:INFO: yeah - word is not known
+2020-05-25 16:51:57,753 - main_logger.srt_parser:INFO: Ive - proper name
+2020-05-25 16:51:58,756 - main_logger.srt_parser:INFO: done - word is not known
+2020-05-25 16:51:58,864 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:51:58,868 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:51:58,870 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 16:51:59,854 - main_logger.srt_parser:INFO: three - word is not known
+2020-05-25 16:52:00,776 - main_logger.srt_parser:INFO: days - word is not known
+2020-05-25 16:52:01,800 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 16:52:03,096 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 16:52:04,223 - main_logger.srt_parser:INFO: row - word is not known
+2020-05-25 16:52:04,333 - main_logger.srt_parser:INFO: he - word is known
+2020-05-25 16:52:05,280 - main_logger.srt_parser:INFO: got - word is not known
+2020-05-25 16:52:05,355 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 16:52:06,321 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:52:07,343 - main_logger.srt_parser:INFO: newspaper - word is not known
+2020-05-25 16:52:08,776 - main_logger.srt_parser:INFO: before - word is not known
+2020-05-25 16:52:08,889 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:52:09,888 - main_logger.srt_parser:INFO: did - word is not known
+2020-05-25 16:52:09,971 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:09,971 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:09,971 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:09,972 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:09,972 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:11,034 - main_logger.srt_parser:INFO: .and - word is not known
+2020-05-25 16:52:12,144 - main_logger.srt_parser:INFO: peed - word is not known
+2020-05-25 16:52:12,225 - main_logger.srt_parser:INFO: all - word is known
+2020-05-25 16:52:12,238 - main_logger.srt_parser:INFO: over - word is known
+2020-05-25 16:52:13,531 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:52:14,612 - main_logger.srt_parser:INFO: crossword - word is not known
+2020-05-25 16:52:14,694 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:16,816 - main_logger.srt_parser:INFO: ive - word is not known
+2020-05-25 16:52:17,995 - main_logger.srt_parser:INFO: never - word is not known
+2020-05-25 16:52:18,104 - main_logger.srt_parser:INFO: done - word is known
+2020-05-25 16:52:18,110 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:52:18,115 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:19,123 - main_logger.srt_parser:INFO: now - word is not known
+2020-05-25 16:52:20,351 - main_logger.srt_parser:INFO: tell - word is not known
+2020-05-25 16:52:20,437 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 16:52:21,497 - main_logger.srt_parser:INFO: she - word is not known
+2020-05-25 16:52:24,950 - main_logger.srt_parser:INFO: doesnt - word is not known
+2020-05-25 16:52:25,877 - main_logger.srt_parser:INFO: look - word is not known
+2020-05-25 16:52:27,104 - main_logger.srt_parser:INFO: exactly - word is not known
+2020-05-25 16:52:28,235 - main_logger.srt_parser:INFO: like - word is not known
+2020-05-25 16:52:29,655 - main_logger.srt_parser:INFO: her - word is not known
+2020-05-25 16:52:31,125 - main_logger.srt_parser:INFO: sister - word is not known
+2020-05-25 16:52:31,291 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:33,290 - main_logger.srt_parser:INFO: im - word is not known
+2020-05-25 16:52:34,479 - main_logger.srt_parser:INFO: saying - word is not known
+2020-05-25 16:52:34,587 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:52:35,614 - main_logger.srt_parser:INFO: see - word is not known
+2020-05-25 16:52:36,734 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 16:52:37,860 - main_logger.srt_parser:INFO: difference - word is not known
+2020-05-25 16:52:37,978 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:39,107 - main_logger.srt_parser:INFO: theyre - word is not known
+2020-05-25 16:52:40,113 - main_logger.srt_parser:INFO: twins - word is not known
+2020-05-25 16:52:40,216 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:40,217 - main_logger.srt_parser:INFO: I - strange uppercase word
+2020-05-25 16:52:41,690 - main_logger.srt_parser:INFO: dont - word is not known
+2020-05-25 16:52:42,671 - main_logger.srt_parser:INFO: care - word is not known
+2020-05-25 16:52:42,754 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:43,707 - main_logger.srt_parser:INFO: phoebes - word is not known
+2020-05-25 16:52:43,773 - main_logger.srt_parser:INFO: Phoebe - proper name
+2020-05-25 16:52:43,773 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:46,357 - main_logger.srt_parser:INFO: ursulas - word is not known
+2020-05-25 16:52:48,509 - main_logger.srt_parser:INFO: hot - word is not known
+2020-05-25 16:52:48,616 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:52:48,618 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:52:48,624 - main_logger.srt_parser:INFO: know - word is known
+2020-05-25 16:52:48,631 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:52:50,188 - main_logger.srt_parser:INFO: thing - word is not known
+2020-05-25 16:52:52,349 - main_logger.srt_parser:INFO: when - word is not known
+2020-05-25 16:52:52,428 - main_logger.srt_parser:INFO: we - word is known
+2020-05-25 16:52:53,436 - main_logger.srt_parser:INFO: talk - word is not known
+2020-05-25 16:52:53,536 - main_logger.srt_parser:INFO: about - word is known
+2020-05-25 16:52:57,812 - main_logger.srt_parser:INFO: things - filtered form of that word is known
+2020-05-25 16:52:57,825 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:52:57,827 - main_logger.srt_parser:INFO: Lets - proper name
+2020-05-25 16:52:59,828 - main_logger.srt_parser:INFO: not - word is not known
+2020-05-25 16:53:01,001 - main_logger.srt_parser:INFO: do - word is not known
+2020-05-25 16:53:01,088 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:53:02,947 - main_logger.srt_parser:INFO: anymore - word is not known
+2020-05-25 16:53:03,036 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:03,040 - main_logger.srt_parser:INFO: okay - word is known
+2020-05-25 16:53:03,048 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:03,049 - main_logger.srt_parser:INFO: ROSS - strange uppercase word
+2020-05-25 16:53:03,049 - main_logger.srt_parser:INFO: Hey - proper name
+2020-05-25 16:53:04,190 - main_logger.srt_parser:INFO: guys - word is not known
+2020-05-25 16:53:04,285 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:04,285 - main_logger.srt_parser:INFO: ALL - strange uppercase word
+2020-05-25 16:53:04,285 - main_logger.srt_parser:INFO: Hey - proper name
+2020-05-25 16:53:04,285 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:05,385 - main_logger.srt_parser:INFO: hey - word is not known
+2020-05-25 16:53:05,489 - main_logger.srt_parser:INFO: Pheebs - proper name
+2020-05-25 16:53:05,490 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:07,982 - main_logger.srt_parser:INFO: guess - word is not known
+2020-05-25 16:53:09,536 - main_logger.srt_parser:INFO: who - word is not known
+2020-05-25 16:53:09,640 - main_logger.srt_parser:INFO: we - word is known
+2020-05-25 16:53:10,782 - main_logger.srt_parser:INFO: saw - word is not known
+2020-05-25 16:53:11,962 - main_logger.srt_parser:INFO: today - word is not known
+2020-05-25 16:53:12,072 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:13,187 - main_logger.srt_parser:INFO: ooh - word is not known
+2020-05-25 16:53:13,307 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:13,311 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:53:15,081 - main_logger.srt_parser:INFO: fun - word is not known
+2020-05-25 16:53:15,178 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:15,181 - main_logger.srt_parser:INFO: okay - word is known
+2020-05-25 16:53:15,188 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:16,462 - main_logger.srt_parser:INFO: um - word is not known
+2020-05-25 16:53:16,546 - main_logger.srt_parser:INFO: Liam - proper name
+2020-05-25 16:53:16,546 - main_logger.srt_parser:INFO: Neeson - proper name
+2020-05-25 16:53:16,546 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:53:16,550 - main_logger.srt_parser:INFO: no - word is known
+2020-05-25 16:53:16,560 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:25,807 - main_logger.srt_parser:ERROR: morley - LemaAPIError
+2020-05-25 16:55:25,807 - main_logger.srt_parser:INFO: Safer - proper name
+2020-05-25 16:55:25,807 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:25,809 - main_logger.srt_parser:INFO: JOEY - strange uppercase word
+2020-05-25 16:55:25,810 - main_logger.srt_parser:INFO: Nope - proper name
+2020-05-25 16:55:25,810 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:26,921 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:55:33,781 - main_logger.srt_parser:INFO: woman - word is not known
+2020-05-25 16:55:33,882 - main_logger.srt_parser:INFO: who - word is known
+2020-05-25 16:55:34,928 - main_logger.srt_parser:INFO: cuts - word is not known
+2020-05-25 16:55:34,998 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 16:55:36,961 - main_logger.srt_parser:INFO: hair - word is not known
+2020-05-25 16:55:37,065 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:37,065 - main_logger.srt_parser:INFO: JOEY - strange uppercase word
+2020-05-25 16:55:37,065 - main_logger.srt_parser:INFO: No - proper name
+2020-05-25 16:55:37,065 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:40,113 - main_logger.srt_parser:INFO: look - word is not known
+2020-05-25 16:55:40,224 - main_logger.srt_parser:INFO: this - word is known
+2020-05-25 16:55:41,956 - main_logger.srt_parser:INFO: could - word is not known
+2020-05-25 16:55:43,443 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:55:44,918 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 16:55:47,229 - main_logger.srt_parser:INFO: really - word is not known
+2020-05-25 16:55:49,747 - main_logger.srt_parser:INFO: long - word is not known
+2020-05-25 16:55:51,405 - main_logger.srt_parser:INFO: game - word is not known
+2020-05-25 16:55:51,520 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:53,646 - main_logger.srt_parser:INFO: your - word is not known
+2020-05-25 16:55:53,742 - main_logger.srt_parser:INFO: sister - word is known
+2020-05-25 16:55:53,747 - main_logger.srt_parser:INFO: Ursula - proper name
+2020-05-25 16:55:53,747 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:53,749 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:55:55,727 - main_logger.srt_parser:INFO: really - word is not known
+2020-05-25 16:55:55,728 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:55:55,728 - main_logger.srt_parser:INFO: Yeah - proper name
+2020-05-25 16:55:55,728 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:55:55,733 - main_logger.srt_parser:INFO: she - word is known
+2020-05-25 16:55:57,117 - main_logger.srt_parser:INFO: works - word is not known
+2020-05-25 16:55:58,269 - main_logger.srt_parser:INFO: at - word is not known
+2020-05-25 16:55:58,377 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:55:59,723 - main_logger.srt_parser:INFO: place - word is not known
+2020-05-25 16:56:00,817 - main_logger.srt_parser:INFO: uh - word is not known
+2020-05-25 16:56:00,893 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:00,893 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:00,893 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:01,946 - main_logger.srt_parser:INFO: riffs - word is not known
+2020-05-25 16:56:02,037 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:02,039 - main_logger.srt_parser:INFO: yeah - word is known
+2020-05-25 16:56:02,048 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:56:02,050 - main_logger.srt_parser:INFO: know - word is known
+2020-05-25 16:56:02,054 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:02,056 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:56:02,063 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:56:03,618 - main_logger.srt_parser:INFO: do - word is not known
+2020-05-25 16:56:03,694 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:03,694 - main_logger.srt_parser:INFO: She - proper name
+2020-05-25 16:56:06,650 - main_logger.srt_parser:INFO: said - word is not known
+2020-05-25 16:56:06,723 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:56:06,736 - main_logger.srt_parser:INFO: guys - word is known
+2020-05-25 16:56:07,903 - main_logger.srt_parser:INFO: havent - word is not known
+2020-05-25 16:56:09,731 - main_logger.srt_parser:INFO: talked - word is not known
+2020-05-25 16:56:11,670 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 16:56:14,749 - main_logger.srt_parser:INFO: years - word is not known
+2020-05-25 16:56:14,865 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:17,001 - main_logger.srt_parser:INFO: hmm - word is not known
+2020-05-25 16:56:17,121 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:17,121 - main_logger.srt_parser:INFO: Yeah - proper name
+2020-05-25 16:56:17,121 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:17,127 - main_logger.srt_parser:INFO: so - word is known
+2020-05-25 16:56:18,581 - main_logger.srt_parser:INFO: um - word is not known
+2020-05-25 16:56:19,964 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 16:56:20,060 - main_logger.srt_parser:INFO: she - word is known
+2020-05-25 16:56:21,604 - main_logger.srt_parser:INFO: fat - word is not known
+2020-05-25 16:56:21,694 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:21,695 - main_logger.srt_parser:INFO: Not - proper name
+2020-05-25 16:56:22,727 - main_logger.srt_parser:INFO: from - word is not known
+2020-05-25 16:56:23,855 - main_logger.srt_parser:INFO: where - word is not known
+2020-05-25 16:56:23,942 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:56:24,888 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 16:56:26,042 - main_logger.srt_parser:INFO: standing - word is not known
+2020-05-25 16:56:26,152 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:27,375 - main_logger.srt_parser:INFO: where - word is not known
+2020-05-25 16:56:28,393 - main_logger.srt_parser:INFO: were - word is not known
+2020-05-25 16:56:28,468 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:56:28,480 - main_logger.srt_parser:INFO: standing - word is known
+2020-05-25 16:56:28,486 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:28,488 - main_logger.srt_parser:INFO: Uh - proper name
+2020-05-25 16:56:28,489 - main_logger.srt_parser:INFO: Pheebs - proper name
+2020-05-25 16:56:28,491 - main_logger.srt_parser:INFO: so - word is known
+2020-05-25 16:56:28,499 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:56:28,507 - main_logger.srt_parser:INFO: guys - word is known
+2020-05-25 16:56:30,920 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 16:56:32,455 - main_logger.srt_parser:INFO: dont - word is not known
+2020-05-25 16:56:34,625 - main_logger.srt_parser:INFO: get - word is not known
+2020-05-25 16:56:36,431 - main_logger.srt_parser:INFO: along - word is not known
+2020-05-25 16:56:36,527 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:36,528 - main_logger.srt_parser:INFO: Its - proper name
+2020-05-25 16:56:38,069 - main_logger.srt_parser:INFO: mostly - word is not known
+2020-05-25 16:56:39,237 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 16:56:40,280 - main_logger.srt_parser:INFO: dumb - word is not known
+2020-05-25 16:56:40,395 - main_logger.srt_parser:INFO: sister - word is known
+2020-05-25 16:56:41,745 - main_logger.srt_parser:INFO: stuff - word is not known
+2020-05-25 16:56:41,886 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:56:41,902 - main_logger.srt_parser:INFO: know - word is known
+2020-05-25 16:56:41,910 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:56:41,912 - main_logger.srt_parser:INFO: Everyone - proper name
+2020-05-25 16:56:43,701 - main_logger.srt_parser:INFO: always - word is not known
+2020-05-25 16:56:44,831 - main_logger.srt_parser:INFO: thought - word is not known
+2020-05-25 16:56:44,937 - main_logger.srt_parser:INFO: of - word is known
+2020-05-25 16:56:45,862 - main_logger.srt_parser:INFO: her - word is not known
+2020-05-25 16:56:46,918 - main_logger.srt_parser:INFO: as - word is not known
+2020-05-25 16:56:48,943 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:56:51,092 - main_logger.srt_parser:INFO: pretty - word is not known
+2020-05-25 16:56:52,204 - main_logger.srt_parser:INFO: one - word is not known
+2020-05-25 16:56:52,369 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:52,373 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:56:52,378 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:52,381 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:56:52,389 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:52,391 - main_logger.srt_parser:INFO: she - word is known
+2020-05-25 16:56:53,567 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 16:56:54,714 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 16:56:55,818 - main_logger.srt_parser:INFO: first - word is not known
+2020-05-25 16:56:55,933 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 16:56:58,871 - main_logger.srt_parser:INFO: walk - word is not known
+2020-05-25 16:56:59,010 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:59,010 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:59,011 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:59,012 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:56:59,012 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:00,320 - main_logger.srt_parser:INFO: .even - word is not known
+2020-05-25 16:57:01,744 - main_logger.srt_parser:INFO: though - word is not known
+2020-05-25 16:57:01,847 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 16:57:02,938 - main_logger.srt_parser:INFO: did - word is not known
+2020-05-25 16:57:04,643 - main_logger.srt_parser:INFO: it - word is not known
+2020-05-25 16:57:07,077 - main_logger.srt_parser:INFO: later - word is not known
+2020-05-25 16:57:07,184 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 16:57:09,614 - main_logger.srt_parser:INFO: same - word is not known
+2020-05-25 16:57:09,723 - main_logger.srt_parser:INFO: day - word is known
+2020-05-25 16:57:09,728 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:09,734 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 16:57:09,745 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 16:57:11,111 - main_logger.srt_parser:INFO: parents - word is not known
+2020-05-25 16:57:13,093 - main_logger.srt_parser:INFO: by - word is not known
+2020-05-25 16:57:14,261 - main_logger.srt_parser:INFO: then - word is not known
+2020-05-25 16:57:14,371 - main_logger.srt_parser:INFO: it - word is known
+2020-05-25 16:57:15,448 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 16:57:15,651 - main_logger.srt_parser:INFO: Yeah - proper name
+2020-05-25 16:57:15,656 - main_logger.srt_parser:INFO: what - word is known
+2020-05-25 16:57:16,797 - main_logger.srt_parser:INFO: else - word is not known
+2020-05-25 16:57:18,332 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 16:57:19,467 - main_logger.srt_parser:INFO: new - word is not known
+2020-05-25 16:57:19,567 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:57:19,567 - main_logger.srt_parser:INFO: ROSS - proper name
+2020-05-25 16:57:19,568 - main_logger.srt_parser:INFO: Oh - proper name
+2020-05-25 16:57:19,568 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:20,792 - main_logger.srt_parser:INFO: pheebs - word is not known
+2020-05-25 16:57:20,879 - main_logger.srt_parser:INFO: Im - proper name
+2020-05-25 16:57:21,926 - main_logger.srt_parser:INFO: sorry - word is not known
+2020-05-25 16:57:22,010 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:23,074 - main_logger.srt_parser:INFO: ive - word is not known
+2020-05-25 16:57:24,204 - main_logger.srt_parser:INFO: gotta - word is not known
+2020-05-25 16:57:25,503 - main_logger.srt_parser:INFO: go - word is not known
+2020-05-25 16:57:25,595 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:26,543 - main_logger.srt_parser:INFO: ive - word is not known
+2020-05-25 16:57:27,546 - main_logger.srt_parser:INFO: got - word is not known
+2020-05-25 16:57:27,632 - main_logger.srt_parser:INFO: Lamaze - proper name
+2020-05-25 16:57:28,555 - main_logger.srt_parser:INFO: class - word is not known
+2020-05-25 16:57:28,705 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:57:28,712 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 16:57:28,726 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 16:57:28,733 - main_logger.srt_parser:INFO: Ive - proper name
+2020-05-25 16:57:31,217 - main_logger.srt_parser:INFO: got - word is not known
+2020-05-25 16:57:32,244 - main_logger.srt_parser:INFO: earth - word is not known
+2020-05-25 16:57:33,305 - main_logger.srt_parser:INFO: science - word is not known
+2020-05-25 16:57:34,789 - main_logger.srt_parser:INFO: but - word is not known
+2020-05-25 16:57:34,932 - main_logger.srt_parser:INFO: Ill - proper name
+2020-05-25 16:57:35,869 - main_logger.srt_parser:INFO: catch - word is not known
+2020-05-25 16:57:35,985 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:57:36,969 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 16:57:38,208 - main_logger.srt_parser:INFO: gym - word is not known
+2020-05-25 16:57:38,339 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:57:38,339 - main_logger.srt_parser:INFO: So - proper name
+2020-05-25 16:57:39,988 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 16:57:40,067 - main_logger.srt_parser:INFO: this - word is known
+2020-05-25 16:57:41,895 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 16:59:52,047 - main_logger.srt_parser:ERROR: gonna - LemaAPIError
+2020-05-25 16:59:53,162 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:59:53,247 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 16:59:53,259 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 16:59:53,264 - main_logger.srt_parser:INFO: Carol - proper name
+2020-05-25 16:59:53,264 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 16:59:53,265 - main_logger.srt_parser:INFO: No - proper name
+2020-05-25 16:59:53,265 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 16:59:54,186 - main_logger.srt_parser:INFO: susan - word is not known
+2020-05-25 16:59:55,504 - main_logger.srt_parser:INFO: will - word is not known
+2020-05-25 16:59:56,525 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 16:59:57,986 - main_logger.srt_parser:INFO: there - word is not known
+2020-05-25 16:59:58,981 - main_logger.srt_parser:INFO: too - word is not known
+2020-05-25 16:59:59,074 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:00,108 - main_logger.srt_parser:INFO: weve - word is not known
+2020-05-25 17:00:01,047 - main_logger.srt_parser:INFO: got - word is not known
+2020-05-25 17:00:02,054 - main_logger.srt_parser:INFO: dads - word is not known
+2020-05-25 17:00:02,122 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:02,977 - main_logger.srt_parser:INFO: weve - word is not known
+2020-05-25 17:00:03,785 - main_logger.srt_parser:INFO: got - word is not known
+2020-05-25 17:00:04,589 - main_logger.srt_parser:INFO: lesbians - word is not known
+2020-05-25 17:00:04,673 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:05,758 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 17:00:06,686 - main_logger.srt_parser:INFO: whole - word is not known
+2020-05-25 17:00:07,662 - main_logger.srt_parser:INFO: parenting - word is not known
+2020-05-25 17:00:08,710 - main_logger.srt_parser:INFO: team - word is not known
+2020-05-25 17:00:08,790 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:09,940 - main_logger.srt_parser:INFO: well - word is not known
+2020-05-25 17:00:10,852 - main_logger.srt_parser:INFO: isnt - word is not known
+2020-05-25 17:00:10,949 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 17:00:11,800 - main_logger.srt_parser:INFO: gonna - word is not known
+2020-05-25 17:00:12,782 - main_logger.srt_parser:INFO: be - word is not known
+2020-05-25 17:00:13,661 - main_logger.srt_parser:INFO: weird - word is not known
+2020-05-25 17:00:13,727 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:00:13,727 - main_logger.srt_parser:INFO: No - proper name
+2020-05-25 17:00:13,727 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:13,730 - main_logger.srt_parser:INFO: it - word is known
+2020-05-25 17:00:14,518 - main_logger.srt_parser:INFO: might - word is not known
+2020-05-25 17:00:15,455 - main_logger.srt_parser:INFO: have - word is not known
+2020-05-25 17:00:15,502 - main_logger.srt_parser:INFO: been - word is known
+2020-05-25 17:00:15,513 - main_logger.srt_parser:INFO: at - word is known
+2020-05-25 17:00:15,522 - main_logger.srt_parser:INFO: first - word is known
+2020-05-25 17:00:15,526 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:15,527 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:15,527 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:15,528 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:15,528 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:16,340 - main_logger.srt_parser:INFO: .but - word is not known
+2020-05-25 17:00:17,199 - main_logger.srt_parser:INFO: now - word is not known
+2020-05-25 17:00:17,255 - main_logger.srt_parser:INFO: Im - proper name
+2020-05-25 17:00:18,054 - main_logger.srt_parser:INFO: comfortable - word is not known
+2020-05-25 17:00:18,951 - main_logger.srt_parser:INFO: with - word is not known
+2020-05-25 17:00:19,872 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 17:00:20,924 - main_logger.srt_parser:INFO: situation - word is not known
+2020-05-25 17:00:21,024 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:21,956 - main_logger.srt_parser:INFO: ross - word is not known
+2020-05-25 17:00:22,961 - main_logger.srt_parser:INFO: thats - word is not known
+2020-05-25 17:00:23,051 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 17:00:23,981 - main_logger.srt_parser:INFO: jacket - word is not known
+2020-05-25 17:00:24,083 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:24,083 - main_logger.srt_parser:INFO: I - strange uppercase word
+2020-05-25 17:00:24,085 - main_logger.srt_parser:INFO: know - word is known
+2020-05-25 17:00:24,090 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:24,093 - main_logger.srt_parser:INFO: hi - word is known
+2020-05-25 17:00:24,098 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:25,009 - main_logger.srt_parser:INFO: were - word is not known
+2020-05-25 17:00:26,042 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 17:00:26,043 - main_logger.srt_parser:INFO: Rostens - proper name
+2020-05-25 17:00:26,043 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:27,050 - main_logger.srt_parser:INFO: im - word is not known
+2020-05-25 17:00:27,139 - main_logger.srt_parser:INFO: J - proper name
+2020-05-25 17:00:27,140 - main_logger.srt_parser:INFO: .C - strange uppercase word
+2020-05-25 17:00:27,140 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:27,142 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:00:28,183 - main_logger.srt_parser:INFO: hes - word is not known
+2020-05-25 17:00:28,263 - main_logger.srt_parser:INFO: Michael - proper name
+2020-05-25 17:00:28,263 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:28,265 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:00:29,520 - main_logger.srt_parser:INFO: were - word is not known
+2020-05-25 17:00:30,443 - main_logger.srt_parser:INFO: having - word is not known
+2020-05-25 17:00:31,467 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 17:00:32,465 - main_logger.srt_parser:INFO: boy - word is not known
+2020-05-25 17:00:32,558 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:00:33,406 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 17:00:34,328 - main_logger.srt_parser:INFO: girl - word is not known
+2020-05-25 17:00:34,425 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:35,334 - main_logger.srt_parser:INFO: good - word is not known
+2020-05-25 17:00:36,335 - main_logger.srt_parser:INFO: for - word is not known
+2020-05-25 17:00:36,445 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:00:36,450 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:37,301 - main_logger.srt_parser:INFO: alrighty - word is not known
+2020-05-25 17:00:38,198 - main_logger.srt_parser:INFO: next - word is not known
+2020-05-25 17:00:38,250 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:00:38,250 - main_logger.srt_parser:INFO: Hi - proper name
+2020-05-25 17:00:38,250 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:39,142 - main_logger.srt_parser:INFO: um - word is not known
+2020-05-25 17:00:39,226 - main_logger.srt_parser:INFO: Im - proper name
+2020-05-25 17:00:40,045 - main_logger.srt_parser:INFO: uh - word is not known
+2020-05-25 17:00:40,128 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:40,128 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:40,128 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:41,068 - main_logger.srt_parser:INFO: ahem - word is not known
+2020-05-25 17:00:41,192 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:42,284 - main_logger.srt_parser:INFO: im - word is not known
+2020-05-25 17:00:42,373 - main_logger.srt_parser:INFO: Ross - proper name
+2020-05-25 17:00:42,373 - main_logger.srt_parser:INFO: Geller - proper name
+2020-05-25 17:00:42,373 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:42,378 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:00:43,421 - main_logger.srt_parser:INFO: uh - word is not known
+2020-05-25 17:00:44,222 - main_logger.srt_parser:INFO: thats - word is not known
+2020-05-25 17:00:44,311 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 17:00:44,324 - main_logger.srt_parser:INFO: boy - word is known
+2020-05-25 17:00:45,140 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 17:00:46,092 - main_logger.srt_parser:INFO: there - word is not known
+2020-05-25 17:00:46,140 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:00:46,142 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:02:56,367 - main_logger.srt_parser:ERROR: uh - LemaAPIError
+2020-05-25 17:02:56,374 - main_logger.srt_parser:INFO: this - word is known
+2020-05-25 17:02:57,261 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:02:57,351 - main_logger.srt_parser:INFO: Carol - proper name
+2020-05-25 17:02:57,351 - main_logger.srt_parser:INFO: Willick - proper name
+2020-05-25 17:02:57,352 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:02:57,364 - main_logger.srt_parser:INFO: this - word is known
+2020-05-25 17:02:58,174 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:02:58,175 - main_logger.srt_parser:INFO: Susan - proper name
+2020-05-25 17:02:58,175 - main_logger.srt_parser:INFO: Bunch - proper name
+2020-05-25 17:02:58,175 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:02:59,003 - main_logger.srt_parser:INFO: susan - word is not known
+2020-05-25 17:02:59,854 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:03:00,628 - main_logger.srt_parser:INFO: um - word is not known
+2020-05-25 17:03:00,629 - main_logger.srt_parser:INFO: Carols - proper name
+2020-05-25 17:03:00,629 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:00,629 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:00,629 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:00,632 - main_logger.srt_parser:INFO: MUMBLES - strange uppercase word
+2020-05-25 17:03:00,635 - main_logger.srt_parser:INFO: Whos - proper name
+2020-05-25 17:03:01,451 - main_logger.srt_parser:INFO: next - word is not known
+2020-05-25 17:03:01,452 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:03:01,454 - main_logger.srt_parser:INFO: Im - proper name
+2020-05-25 17:03:02,284 - main_logger.srt_parser:INFO: sorry - word is not known
+2020-05-25 17:03:02,372 - main_logger.srt_parser:INFO: Susan - proper name
+2020-05-25 17:03:03,198 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:03:03,198 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:03:03,199 - main_logger.srt_parser:INFO: Susan - proper name
+2020-05-25 17:03:04,033 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:03:04,033 - main_logger.srt_parser:INFO: Carols - proper name
+2020-05-25 17:03:04,945 - main_logger.srt_parser:INFO: friend - word is not known
+2020-05-25 17:03:05,068 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:06,069 - main_logger.srt_parser:INFO: life - word is not known
+2020-05-25 17:03:07,514 - main_logger.srt_parser:INFO: partner - word is not known
+2020-05-25 17:03:07,618 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:08,643 - main_logger.srt_parser:INFO: like - word is not known
+2020-05-25 17:03:09,767 - main_logger.srt_parser:INFO: buddies - word is not known
+2020-05-25 17:03:09,941 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:10,783 - main_logger.srt_parser:INFO: like - word is not known
+2020-05-25 17:03:11,804 - main_logger.srt_parser:INFO: lovers - word is not known
+2020-05-25 17:03:11,958 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:03:11,962 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:03:11,975 - main_logger.srt_parser:INFO: know - word is known
+2020-05-25 17:03:11,984 - main_logger.srt_parser:INFO: how - word is known
+2020-05-25 17:03:13,046 - main_logger.srt_parser:INFO: close - word is not known
+2020-05-25 17:03:14,171 - main_logger.srt_parser:INFO: women - word is not known
+2020-05-25 17:03:15,202 - main_logger.srt_parser:INFO: can - word is not known
+2020-05-25 17:05:24,847 - main_logger.srt_parser:ERROR: get - LemaAPIError
+2020-05-25 17:05:24,847 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:25,881 - main_logger.srt_parser:INFO: susan - word is not known
+2020-05-25 17:05:25,958 - main_logger.srt_parser:INFO: and - word is known
+2020-05-25 17:05:25,968 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 17:05:25,972 - main_logger.srt_parser:INFO: live - word is known
+2020-05-25 17:05:26,875 - main_logger.srt_parser:INFO: together - word is not known
+2020-05-25 17:05:26,960 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:26,960 - main_logger.srt_parser:INFO: I - strange uppercase word
+2020-05-25 17:05:28,019 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 17:05:28,990 - main_logger.srt_parser:INFO: married - word is not known
+2020-05-25 17:05:29,059 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 17:05:29,843 - main_logger.srt_parser:INFO: her - word is not known
+2020-05-25 17:05:29,894 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:30,689 - main_logger.srt_parser:INFO: carol - word is not known
+2020-05-25 17:05:30,770 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:31,580 - main_logger.srt_parser:INFO: not - word is not known
+2020-05-25 17:05:31,630 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 17:05:31,641 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:31,648 - main_logger.srt_parser:INFO: its - word is known
+2020-05-25 17:05:32,514 - main_logger.srt_parser:INFO: a - word is not known
+2020-05-25 17:05:33,422 - main_logger.srt_parser:INFO: little - word is not known
+2020-05-25 17:05:34,342 - main_logger.srt_parser:INFO: complicated - word is not known
+2020-05-25 17:05:34,444 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:34,448 - main_logger.srt_parser:INFO: but - word is known
+2020-05-25 17:05:35,598 - main_logger.srt_parser:INFO: were - word is not known
+2020-05-25 17:05:36,582 - main_logger.srt_parser:INFO: fine - word is not known
+2020-05-25 17:05:36,636 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:37,633 - main_logger.srt_parser:INFO: absolutely - word is not known
+2020-05-25 17:05:37,703 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:37,706 - main_logger.srt_parser:INFO: so - word is known
+2020-05-25 17:05:37,715 - main_logger.srt_parser:INFO: twins - word is known
+2020-05-25 17:05:37,722 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:38,642 - main_logger.srt_parser:INFO: ha - word is not known
+2020-05-25 17:05:38,726 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:39,535 - main_logger.srt_parser:INFO: thats - word is not known
+2020-05-25 17:05:40,380 - main_logger.srt_parser:INFO: like - word is not known
+2020-05-25 17:05:41,255 - main_logger.srt_parser:INFO: two - word is not known
+2020-05-25 17:05:42,211 - main_logger.srt_parser:INFO: births - word is not known
+2020-05-25 17:05:42,311 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:43,097 - main_logger.srt_parser:INFO: ouch - word is not known
+2020-05-25 17:05:43,166 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:43,167 - main_logger.srt_parser:INFO: INTERCOM - strange uppercase word
+2020-05-25 17:05:43,167 - main_logger.srt_parser:INFO: BUZZES - proper name
+2020-05-25 17:05:43,168 - main_logger.srt_parser:INFO: MIMICS - proper name
+2020-05-25 17:05:43,168 - main_logger.srt_parser:INFO: INTERCOM - proper name
+2020-05-25 17:05:43,168 - main_logger.srt_parser:INFO: BUZZING - proper name
+2020-05-25 17:05:43,169 - main_logger.srt_parser:INFO: To - proper name
+2020-05-25 17:05:43,173 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:05:43,185 - main_logger.srt_parser:INFO: too - word is known
+2020-05-25 17:05:43,192 - main_logger.srt_parser:INFO: Helen - proper name
+2020-05-25 17:05:43,192 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:43,192 - main_logger.srt_parser:INFO: HELEN - strange uppercase word
+2020-05-25 17:05:43,192 - main_logger.srt_parser:INFO: OVER - proper name
+2020-05-25 17:05:43,192 - main_logger.srt_parser:INFO: INTERCOM - proper name
+2020-05-25 17:05:43,193 - main_logger.srt_parser:INFO: Nina - proper name
+2020-05-25 17:05:43,193 - main_logger.srt_parser:INFO: Bookbinder - proper name
+2020-05-25 17:05:44,036 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:05:44,112 - main_logger.srt_parser:INFO: here - word is known
+2020-05-25 17:05:44,124 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 17:05:44,134 - main_logger.srt_parser:INFO: see - word is known
+2020-05-25 17:05:44,141 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:05:44,147 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:44,159 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 17:05:44,175 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:44,183 - main_logger.srt_parser:INFO: okay - word is known
+2020-05-25 17:05:45,005 - main_logger.srt_parser:INFO: send - word is not known
+2020-05-25 17:05:45,970 - main_logger.srt_parser:INFO: her - word is not known
+2020-05-25 17:05:46,850 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 17:05:46,897 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:46,900 - main_logger.srt_parser:INFO: hi - word is known
+2020-05-25 17:05:46,912 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:46,914 - main_logger.srt_parser:INFO: hi - word is known
+2020-05-25 17:05:46,920 - main_logger.srt_parser:INFO: Nina - proper name
+2020-05-25 17:05:46,920 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:47,706 - main_logger.srt_parser:INFO: come - word is not known
+2020-05-25 17:05:48,548 - main_logger.srt_parser:INFO: on - word is not known
+2020-05-25 17:05:49,390 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 17:05:49,391 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:49,394 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:05:50,184 - main_logger.srt_parser:INFO: wanted - word is not known
+2020-05-25 17:05:50,233 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 17:05:50,245 - main_logger.srt_parser:INFO: see - word is known
+2020-05-25 17:05:50,253 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 17:05:50,259 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:05:50,260 - main_logger.srt_parser:INFO: Uh - proper name
+2020-05-25 17:05:51,340 - main_logger.srt_parser:INFO: yes - word is not known
+2020-05-25 17:05:51,421 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:52,264 - main_logger.srt_parser:INFO: uh - word is not known
+2020-05-25 17:05:52,311 - main_logger.srt_parser:INFO: I - proper name
+2020-05-25 17:05:53,195 - main_logger.srt_parser:INFO: was - word is not known
+2020-05-25 17:05:54,196 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 17:05:55,117 - main_logger.srt_parser:INFO: going - word is not known
+2020-05-25 17:05:55,182 - main_logger.srt_parser:INFO: over - word is known
+2020-05-25 17:05:55,195 - main_logger.srt_parser:INFO: your - word is known
+2020-05-25 17:05:56,042 - main_logger.srt_parser:INFO: data - word is not known
+2020-05-25 17:05:56,112 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:56,945 - main_logger.srt_parser:INFO: youve - word is not known
+2020-05-25 17:05:57,027 - main_logger.srt_parser:INFO: been - word is known
+2020-05-25 17:05:57,847 - main_logger.srt_parser:INFO: postdating - word is not known
+2020-05-25 17:05:57,938 - main_logger.srt_parser:INFO: your - word is known
+2020-05-25 17:05:57,948 - main_logger.srt_parser:INFO: Friday - proper name
+2020-05-25 17:05:58,724 - main_logger.srt_parser:INFO: numbers - word is not known
+2020-05-25 17:05:58,836 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:05:59,865 - main_logger.srt_parser:INFO: which - word is not known
+2020-05-25 17:06:00,746 - main_logger.srt_parser:INFO: is - word is not known
+2020-05-25 17:06:01,563 - main_logger.srt_parser:INFO: bad - word is not known
+2020-05-25 17:06:01,644 - main_logger.srt_parser:INFO: because - word is known
+2020-05-25 17:06:01,651 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:06:01,651 - main_logger.srt_parser:INFO: Well - proper name
+2020-05-25 17:06:01,655 - main_logger.srt_parser:INFO: it - word is known
+2020-05-25 17:06:02,461 - main_logger.srt_parser:INFO: throws - word is not known
+2020-05-25 17:06:02,551 - main_logger.srt_parser:INFO: my - word is known
+2020-05-25 17:06:02,559 - main_logger.srt_parser:INFO: WENUS - proper name
+2020-05-25 17:06:03,343 - main_logger.srt_parser:INFO: out - word is not known
+2020-05-25 17:06:03,392 - main_logger.srt_parser:INFO: of - word is known
+2020-05-25 17:06:04,194 - main_logger.srt_parser:INFO: whack - word is not known
+2020-05-25 17:06:04,270 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:04,274 - main_logger.srt_parser:INFO: ha - word is known
+2020-05-25 17:06:04,282 - main_logger.srt_parser:INFO: ha - word is known
+2020-05-25 17:06:04,288 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:04,291 - main_logger.srt_parser:INFO: excuse - word is known
+2020-05-25 17:06:04,300 - main_logger.srt_parser:INFO: me - word is known
+2020-05-25 17:06:04,306 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:06:04,307 - main_logger.srt_parser:INFO: WENUS - proper name
+2020-05-25 17:06:04,307 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:05,169 - main_logger.srt_parser:INFO: ahem - word is not known
+2020-05-25 17:06:05,245 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:06,089 - main_logger.srt_parser:INFO: weekly - word is not known
+2020-05-25 17:06:06,193 - main_logger.srt_parser:INFO: Estimated - proper name
+2020-05-25 17:06:06,193 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:06,193 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:06,193 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:06,198 - main_logger.srt_parser:INFO: oh - word is known
+2020-05-25 17:06:06,207 - main_logger.srt_parser:INFO: Net - proper name
+2020-05-25 17:06:06,207 - main_logger.srt_parser:INFO: Usage - proper name
+2020-05-25 17:06:06,207 - main_logger.srt_parser:INFO: Statistics - proper name
+2020-05-25 17:06:06,207 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:06,219 - main_logger.srt_parser:INFO: right - word is known
+2020-05-25 17:06:06,233 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:07,020 - main_logger.srt_parser:INFO: gotcha - word is not known
+2020-05-25 17:06:07,931 - main_logger.srt_parser:INFO: gotcha - word is not known
+2020-05-25 17:06:07,932 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:08,858 - main_logger.srt_parser:INFO: wont - word is not known
+2020-05-25 17:06:09,884 - main_logger.srt_parser:INFO: happen - word is not known
+2020-05-25 17:06:10,907 - main_logger.srt_parser:INFO: again - word is not known
+2020-05-25 17:06:10,977 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:10,977 - main_logger.srt_parser:INFO: I - strange uppercase word
+2020-05-25 17:06:11,802 - main_logger.srt_parser:INFO: wouldnt - word is not known
+2020-05-25 17:06:12,738 - main_logger.srt_parser:INFO: want - word is not known
+2020-05-25 17:06:12,812 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 17:06:13,754 - main_logger.srt_parser:INFO: do - word is not known
+2020-05-25 17:06:14,689 - main_logger.srt_parser:INFO: anything - word is not known
+2020-05-25 17:06:14,770 - main_logger.srt_parser:INFO: to - word is known
+2020-05-25 17:06:15,597 - main_logger.srt_parser:INFO: hurt - word is not known
+2020-05-25 17:06:15,703 - main_logger.srt_parser:INFO: your - word is known
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: .WENUS - strange uppercase word
+2020-05-25 17:06:15,709 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:15,712 - main_logger.srt_parser:INFO: its - word is known
+2020-05-25 17:06:16,533 - main_logger.srt_parser:INFO: not - word is not known
+2020-05-25 17:06:17,454 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 17:06:17,539 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 17:06:18,375 - main_logger.srt_parser:INFO: shes - word is not known
+2020-05-25 17:06:19,294 - main_logger.srt_parser:INFO: cute - word is not known
+2020-05-25 17:06:19,343 - main_logger.srt_parser:INFO: okay - word is known
+2020-05-25 17:06:19,353 - main_logger.srt_parser:INFO: ? - interpunction
+2020-05-25 17:06:19,353 - main_logger.srt_parser:INFO: Its - proper name
+2020-05-25 17:06:20,343 - main_logger.srt_parser:INFO: just - word is not known
+2020-05-25 17:06:20,348 - main_logger.srt_parser:INFO: that - word is known
+2020-05-25 17:06:20,368 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:20,369 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:20,369 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:20,369 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:20,369 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:21,221 - main_logger.srt_parser:INFO: .shes - word is not known
+2020-05-25 17:06:22,073 - main_logger.srt_parser:INFO: really - word is not known
+2020-05-25 17:06:22,997 - main_logger.srt_parser:INFO: really - word is not known
+2020-05-25 17:06:23,813 - main_logger.srt_parser:INFO: cute - word is not known
+2020-05-25 17:06:23,814 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:23,817 - main_logger.srt_parser:INFO: it - word is known
+2020-05-25 17:06:24,735 - main_logger.srt_parser:INFO: doesnt - word is not known
+2020-05-25 17:06:25,650 - main_logger.srt_parser:INFO: matter - word is not known
+2020-05-25 17:06:25,728 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-25 17:06:25,731 - main_logger.srt_parser:INFO: you - word is known
+2020-05-25 17:06:26,548 - main_logger.srt_parser:INFO: dont - word is not known
+2020-05-25 17:06:27,522 - main_logger.srt_parser:INFO: dip - word is not known
+2020-05-25 17:06:27,596 - main_logger.srt_parser:INFO: your - word is known
+2020-05-25 17:06:28,513 - main_logger.srt_parser:INFO: pen - word is not known
+2020-05-25 17:06:29,768 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-25 17:06:31,074 - main_logger.srt_parser:INFO: the - word is not known
+2020-05-25 17:06:32,205 - main_logger.srt_parser:INFO: company - word is not known
+2020-05-25 17:06:33,215 - main_logger.srt_parser:INFO: ink - word is not known
+2020-05-25 17:06:33,285 - main_logger.srt_parser:INFO: . - interpunction
+2020-05-26 11:37:40,622 - main_logger.srt_parser:INFO: English - proper name
+2020-05-26 11:37:40,623 - main_logger.srt_parser:INFO: US - proper name
+2020-05-26 11:37:40,626 - main_logger.srt_parser:INFO: This - proper name
+2020-05-26 11:37:40,629 - main_logger.srt_parser:INFO: is - in black list
+2020-05-26 11:37:40,632 - main_logger.srt_parser:INFO: a - in black list
+2020-05-26 11:37:43,372 - main_logger.srt_parser:INFO: subtitle - word is not known
+2020-05-26 11:37:44,844 - main_logger.srt_parser:INFO: in - word is not known
+2020-05-26 11:37:44,910 - main_logger.srt_parser:INFO: American - proper name
+2020-05-26 11:37:44,910 - main_logger.srt_parser:INFO: English - proper name
+2020-05-26 11:37:44,912 - main_logger.srt_parser:INFO: Adding - proper name
+2020-05-26 11:37:45,872 - main_logger.srt_parser:INFO: subtitles - filtered form of that word is known
+2020-05-26 11:37:45,884 - main_logger.srt_parser:INFO: is - in black list
+2020-05-26 11:37:46,783 - main_logger.srt_parser:INFO: very - word is not known
+2020-05-26 11:37:47,643 - main_logger.srt_parser:INFO: easy - word is not known
+2020-05-26 11:37:47,747 - main_logger.srt_parser:INFO: to - word is known
+2020-05-26 11:37:49,117 - main_logger.srt_parser:INFO: do - word is not known
