@@ -41,6 +41,7 @@ if __name__ == "__main__":
     app.exec_()
 
     if load_srt.no_translations_words:
+        logger.info("number of words without translation: %d", len(load_srt.no_translations_words))
         no_translations = NoTranslationController(load_srt.no_translations_words)
         app.exec_()
         black_list = no_translations.getBlacklist()
@@ -56,18 +57,16 @@ if __name__ == "__main__":
     treshold = min(dbh.get_biggest_frequency()*0.7, 10)
 
     most_frequent_words = dbh.get_most_frequent_words(treshold)
-    print(most_frequent_words)
+    logger.info("number of most frequent words: %d", len(most_frequent_words))
     if most_frequent_words:
         most_frequent = MostFrequentController(most_frequent_words)
         app.exec_()
 
     score = most_frequent.getScore()
-    print(score)
-    print(len(most_frequent_words))
+    logger.info("most frequent score: %d", score)
 
-    test_dic_list = [{"word": "next", "translation": "nastepny"}, {"word": "today", "translation": "dzisiaj"}]
     to_be_exported = dbh.get_words_from_stats()
-    print(to_be_exported)
+    logger.info("number of words to be exported: %d", len(to_be_exported))
     export_dialog = ExportDialog(config, to_be_exported, score, len(most_frequent_words))
     app.exec_()
     sys.exit()

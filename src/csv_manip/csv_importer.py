@@ -23,7 +23,7 @@ class csv_importer:
         """
          
         try:
-            assert re.match(".*\.csv$", filename), "file has wrong extension"
+            assert re.match(r".*\.csv$", filename), "file has wrong extension"
             self.filename = filename
             self.header = header
             self.firstcol = firstcol
