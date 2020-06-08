@@ -31,7 +31,7 @@ class ExportDialog(QtWidgets.QDialog):
         self.word_list = word_list
         self.show()
         self.col_sep = ";"
-        self.col_order = "translation first"
+        self.translation_first = True
         self.filename = ""
         self.rec_sep = "\n"
         self.include_header = False
@@ -51,9 +51,9 @@ class ExportDialog(QtWidgets.QDialog):
 
     def column_order_changed(self):
         if(self.ui.column_order_combo.currentText() == "translation first"):
-            self.col_order = "translation first"
+            self.translation_first = True
         else:
-            self.col_order = "word first"      
+            self.translation_first = False      
 
     def column_sep_changed(self):
         self.col_sep = self.ui.column_separator_box.text()
@@ -68,7 +68,7 @@ class ExportDialog(QtWidgets.QDialog):
         self.translations_max = int(self.ui.translations_num_spin.value())
         csv_exporter = CsvExporter()
         try:
-            csv_exporter.export(self.word_list, self.filename, self.col_order, self.col_sep, self.rec_sep, self.include_header, self.translations_max)
+            csv_exporter.export(self.word_list, self.filename, self.translation_first, self.col_sep, self.rec_sep, self.include_header, self.translations_max)
             self.logger.info("exported")
             self.ui.export_btn.setText("exported")
         except ExportError:

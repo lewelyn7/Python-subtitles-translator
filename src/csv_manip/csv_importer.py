@@ -11,22 +11,21 @@ class csv_importer:
     and new line to indicate new row ( new word ).
     """
 
-    def __init__(self, filename, header=False, firstcol="mylang"):
+    def __init__(self, filename, header=False, translation_first=True):
         """
         Constructor accepts csv filename and optional header argument and order of words in csv fie.
-        If translations are placed in first column, then firstcol should be set to "translations" 
         
         Parameters:
             filename(str): path to imported file
             header(boolean): does file include header?
-            firstcol(str): e.g 'mylang' if first column is with translations
+            translation_first(boolean): if translation is in first column
         """
          
         try:
             assert re.match(r".*\.csv$", filename), "file has wrong extension"
             self.filename = filename
             self.header = header
-            self.firstcol = firstcol
+            self.translation_first = translation_first
         except AssertionError as inst:
             print("assert error", inst.args)
 
@@ -56,7 +55,7 @@ class csv_importer:
                     # normalize strings
                     row[0] = row[0].lower().strip()
                     row[1] = row[1].lower().strip()
-                    if self.firstcol == "mylang":
+                    if self.translation_first == True:
                         yield (row[0], row[1])
                     else:
                         yield (row[1], row[0])

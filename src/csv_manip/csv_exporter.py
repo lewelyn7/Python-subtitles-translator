@@ -9,14 +9,14 @@ class CsvExporter:
     def __init__(self):
         pass
 
-    def export(self, word_list, filename, col_order, col_sep, rec_sep, include_header, translations_max):
+    def export(self, word_list, filename, translation_first, col_sep, rec_sep, include_header, translations_max):
         """
         Exports word_list dictionary to a csv file.
 
         Parameteres:
             word_list(dict): dictionary with words
             filename(str): filename
-            col_ortder(str): string indicating column order in exported file e.g. 'translation first'
+            translation_first(boolean): if translation has to be in first column, set to True
             col_sep(char): column separator in the exported csv file
             include_header(boolean): obvious
             translation_max(int): maximum number of translations to be exported
@@ -31,7 +31,7 @@ class CsvExporter:
         try:
             if include_header:
                 row = []
-                if col_order == "translation first":
+                if translation_first == True:
                     row.append("translation")
                     row.append("word")
                 else:
@@ -46,7 +46,7 @@ class CsvExporter:
                         translations_string += item["translations"][i].replace("\n", "")
                         translations_string += " "
                 row = []
-                if col_order == "translation first":
+                if translation_first == True:
                     row.append(translations_string)
                     row.append(item["word"])
                 else:
