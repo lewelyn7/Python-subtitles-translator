@@ -7,6 +7,11 @@ class NoTranslationController(QtWidgets.QDialog):
     blacklist = []
     iterator = 0
     def __init__(self, wordList):
+        """Opens dialog window and displays words that don't have translations.
+
+        Args:
+            wordList (List): List of words with buffer for list of translations.
+        """
         super().__init__()
 
         self.word_list = wordList
@@ -59,9 +64,19 @@ class NoTranslationController(QtWidgets.QDialog):
         self.ui.word_label.setText(self.word_list[self.iterator][0])
         
     def getList(self):
+        """Gets list of words with added translations.
+
+        Returns:
+            List: List of words with added translations.
+        """
         return self.word_list
 
     def getBlacklist(self):
+        """Gets list of words that have been blacklisted by the user.
+
+        Returns:
+            List: List of blacklisted words.
+        """
         return self.blacklist
     
 

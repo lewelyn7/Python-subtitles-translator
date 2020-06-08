@@ -8,6 +8,11 @@ class MostFrequentController(QtWidgets.QDialog):
     isTranslated = 0
 
     def __init__(self, wordList):
+        """Displays a dialog window with the most frequent words.
+
+        Args:
+            wordList (List): List of the most frequent words.
+        """
         super().__init__()
         self.wordList = wordList
         self.ui = Ui_mostFrequentList()
@@ -73,12 +78,22 @@ class MostFrequentController(QtWidgets.QDialog):
 
 
     def getScore(self):
+        """Returns the userscore.
+
+        Returns:
+            int: score
+        """
         output = 0
         for word in self.wordList:
             output+=word[2]
         return output
 
     def get_known_words(self):
+        """Returns the words marked by the user as known.
+
+        Returns:
+            List: List of known words. 
+        """
         known_words = []
         for word in self.wordList:
             if word[2] == 1:
