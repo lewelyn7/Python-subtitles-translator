@@ -69,7 +69,6 @@ class MostFrequentController(QtWidgets.QDialog):
                 output = output + "\n"
             output = output + word.rstrip("\n")
             i+=1
-        print(output)
         return output
 
 
