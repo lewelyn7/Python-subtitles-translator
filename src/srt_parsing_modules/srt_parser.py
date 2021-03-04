@@ -3,6 +3,14 @@ from ..database_integration_module.db_helpers import DbHelpers
 from ..filters.word_filter import WordFilter, LemmaAPIError
 import logging
 def clean_line(line):
+    """Clears line of special characters.
+
+    Args:
+        line (string): Line to clear.
+
+    Returns:
+        string: Cleaned line.
+    """
     cleaned_line=""
     for letter in line:
         if letter in ",;:\'1234567890#@$^%&*`~\\(<{[)>}]\"\n":
@@ -18,6 +26,14 @@ def clean_line(line):
 
 
 def srt_to_line(srt_file):
+    """Generates lines from srt file.
+
+    Args:
+        srt_file (int): File descriptor.
+
+    Yields:
+        String: Next line.
+    """
     for line in srt_file:
         if line=="":
             continue
@@ -28,6 +44,14 @@ def srt_to_line(srt_file):
         yield line
 
 def line_to_tokens(line):
+    """Splits line to tokens.
+
+    Args:
+        line (string): Line to split.
+
+    Yields:
+        string: Tokens.
+    """
     if len(line) < 1:
         yield from[]
     cleaned_line = clean_line(line)

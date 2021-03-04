@@ -45,7 +45,6 @@ if __name__ == "__main__":
         no_translations = NoTranslationController(load_srt.no_translations_words)
         app.exec_()
         black_list = no_translations.getBlacklist()
-        print(black_list)
         for item in black_list:
             dbh.add_to_blacklist(item)
 

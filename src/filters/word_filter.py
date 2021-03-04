@@ -27,7 +27,6 @@ class WordFilter:
             raise LemmaAPIError
         part_of_speeches = self.engine.part_of_speeches
 
-        # print(part_of_speeches)
         
         self.basic_form = word
         for part in part_of_speeches:
